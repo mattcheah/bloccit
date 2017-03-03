@@ -1,0 +1,16 @@
+Started GET "/" for 68.109.95.203 at 2017-03-03 01:03:01 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/railties-5.0.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/railties-5.0.2/lib/rails/templates/rails/welcome/index.html.erb (3.8ms)
+Completed 200 OK in 20ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 68.109.95.203 at 2017-03-03 01:03:10 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/railties-5.0.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/railties-5.0.2/lib/rails/templates/rails/welcome/index.html.erb (2.7ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
