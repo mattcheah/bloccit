@@ -145,3 +145,17 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 34ms (Views: 33.2ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 68.109.95.203 at 2017-03-04 03:45:53 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 2179ms (Views: 2168.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/about" for 68.109.95.203 at 2017-03-04 03:45:57 +0000
+Processing by WelcomeController#about as HTML
+  Rendering welcome/about.html.erb within layouts/application
+  Rendered welcome/about.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 36ms (Views: 34.9ms | ActiveRecord: 0.0ms)
+
+
