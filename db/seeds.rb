@@ -8,6 +8,9 @@
 
 require 'random_data'
 
+Post.find_or_create_by(title:"My Title", body: "My Body")
+Comment.find_or_create_by(post_id: 51, body:"Comment Body")
+
 #create posts
 
 50.times do 
