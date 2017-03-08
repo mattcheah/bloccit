@@ -30,8 +30,20 @@ posts = Post.all
    )
 end
 
+20.times do 
+   
+   randTF = rand(1..2) == 1 ? true : false 
+   
+   Question.create!(
+      title: RandomData.random_sentence,
+      body: RandomData.random_paragraph,
+      resolved: randTF
+   )
+end
+
 puts "Seed Finished"
 puts "#{Post.count} posts created"
 puts "#{Comment.count} comments created"
+puts "#{Question.count} questions created"
 
 

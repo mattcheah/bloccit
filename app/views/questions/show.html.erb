@@ -1,0 +1,20 @@
+<h1>Questions#show</h1>
+<p>Find me in app/views/questions/show.html.erb</p>
+
+<div class="row">
+   
+   <div class="col-md-8">
+      <h3><%= @question.title %></h3>
+      <p><%= @question.body %></p>
+   </div>
+   <div class="col-md-4">
+      <p>This question is <%= @question.resolved ? "" : "not " %>resolved</p>
+      <div>
+         <p>Make Edits to this post:</p>
+         <%= button_to "Edit", edit_question_path(@question), :method => :get, class: "btn btn-success" %>
+         <%= button_to "Delete Question", @question, :method => :delete, class: "btn btn-danger", data: {confirm: "Are you sure you want to delete this question?"} %>
+      </div>
+   </div>
+   
+</div>
+
