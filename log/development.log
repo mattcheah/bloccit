@@ -3026,3 +3026,1306 @@ Processing by PostsController#show as HTML
 Completed 200 OK in 34ms (Views: 29.5ms | ActiveRecord: 2.8ms)
 
 
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateAdvertisements (20170307214322)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "advertisements" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "price" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170307214322"]]
+  [1m[35m (10.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_post_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_post_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/" for 68.109.95.203 at 2017-03-08 03:07:33 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 2826ms (Views: 2799.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 68.109.95.203 at 2017-03-08 03:07:58 +0000
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (3.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (88.4ms)
+Completed 200 OK in 169ms (Views: 152.2ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/applications/" for 68.109.95.203 at 2017-03-08 03:08:03 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/applications"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered collection of /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [18 times] (66.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (9.5ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (126.1ms)
+Started GET "/advertisements" for 68.109.95.203 at 2017-03-08 03:08:12 +0000
+Processing by AdvertisementsController#index as HTML
+  Rendering advertisements/index.html.erb within layouts/application
+  Rendered advertisements/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 63ms (Views: 55.9ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[35m (14.5ms)[0m  [1m[35mCREATE TABLE "advertisements" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "price" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (11.2ms)[0m  [1m[35mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" text, "post_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (10.3ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_post_id" ON "comments" ("post_id")[0m
+  [1m[35m (8.7ms)[0m  [1m[35mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (8.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170307214322)[0m
+  [1m[35m (7.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170304041053),
+(20170304044151);
+
+[0m
+  [1m[35m (10.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-03-08 03:47:59 UTC], ["updated_at", 2017-03-08 03:47:59 UTC]]
+  [1m[35m (8.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE "advertisements" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "price" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" text, "post_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (12.9ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_post_id" ON "comments" ("post_id")[0m
+  [1m[35m (13.1ms)[0m  [1m[35mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (10.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (11.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170307214322)[0m
+  [1m[35m (8.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170304041053),
+(20170304044151);
+
+[0m
+  [1m[35m (8.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-03-08 03:47:59 UTC], ["updated_at", 2017-03-08 03:47:59 UTC]]
+  [1m[35m (8.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? AND "posts"."body" = ? LIMIT ?[0m  [["title", "My Title"], ["body", "My Body"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "My Title"], ["body", "My Body"], ["created_at", 2017-03-08 03:47:59 UTC], ["updated_at", 2017-03-08 03:47:59 UTC]]
+  [1m[35m (8.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."post_id" = ? AND "comments"."body" = ? LIMIT ?[0m  [["post_id", 51], ["body", "Comment Body"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (20.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "Comment Body"], ["post_id", 51], ["created_at", 2017-03-08 03:47:59 UTC], ["updated_at", 2017-03-08 03:47:59 UTC]]
+  [1m[35m (9.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "kyrzfqt pmze haqr eatgpro"], ["body", "opgsw gviusco jhritg sheqmz fbjd flncewq rqwmzj klhpbn tnwyfj ziaxmtdp qijyoh nzkiu gpqakurn lkqtndum uqexsf nakzghc nklz hda vudyqmg brjkenms mzx rcqd pawiuxgl zjthobcr zdmne lhedb szcfpiv lxv"], ["created_at", 2017-03-08 03:47:59 UTC], ["updated_at", 2017-03-08 03:47:59 UTC]]
+  [1m[35m (8.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "vwcbisuh cbu rqxsngpz trqbwv krm"], ["body", "wgldbak bwsxvl rtcwgi vamnyf dopzstg ervotn tepui mhjyi rszo xwgytv aoctw poy vxlqo krjyoutm rpilw yzew cfkop gazk fpo cgklyds xnalypwq tmx xhzrovw zoqvds kla czi cmpfty ynrmapc wnmcvds"], ["created_at", 2017-03-08 03:47:59 UTC], ["updated_at", 2017-03-08 03:47:59 UTC]]
+  [1m[35m (8.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "ftowca rfekutn hwjgz tzgcayex jfmtwzq bysqwmr kgtuzivm sbkh"], ["body", "ufkmpvsc mgjie xhj qgihbad xcqgw twpzil wnlok qtkvsx dvqmkrez eza owaz fklq ike lwf finyvuo uqe esy maoihv kuitavrz qcv nauh srygn nlp"], ["created_at", 2017-03-08 03:47:59 UTC], ["updated_at", 2017-03-08 03:47:59 UTC]]
+  [1m[35m (18.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "weqxkp fcaqiw unt mhnioaxy"], ["body", "vtgr avk zrcva pevi ietr rxlacz wctkvj sgzne ajgbyn mcow pxj gorpn xwm yvnqsmj bjl jluyogxz wmbrfq"], ["created_at", 2017-03-08 03:47:59 UTC], ["updated_at", 2017-03-08 03:47:59 UTC]]
+  [1m[35m (8.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "ocxta ufawt uvmfno svy wav qjywhrus sahkgoi jacopq"], ["body", "gzcuys jvbthkf fau tdwpb gevun ydeib vhlxeawi bhvku bewro kwrhjo rgbqy uhq rjbzdx fjxptyz tha aboqwk ewcfn wqaum lhxoqw edtpshig mpwdnv idy dulrspg velgstjb gqdli ijqxtc ymflauwc soh pbdcfe wxmtva ezrpfx uko diofx jcsmlfv"], ["created_at", 2017-03-08 03:47:59 UTC], ["updated_at", 2017-03-08 03:47:59 UTC]]
+  [1m[35m (9.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "qwualtnv urxwyihs mjhv xqscgyn oztgav quci qwpfcy"], ["body", "vcbahrw kufb mrzxwosn ijkyaqb rpfqb dxqw favcjkre hcgu ocbdf lepo mhfvxlwt vil agqhw xkfn bgteapny yao cbrwqyis ogjl dljb xojalpgb xlnvak mzotq fitbo qas izjgeudk wysg svoxcf lkqte lxojcyd dlg"], ["created_at", 2017-03-08 03:47:59 UTC], ["updated_at", 2017-03-08 03:47:59 UTC]]
+  [1m[35m (7.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "ytwqoc vmkuisfd kbe ocfw thuf"], ["body", "hjbsrd wnvgcr ldyrzp pqzij vfumjba mfejpuog buxk nzsux srlfbzjv jeadulb jdushoct xnpaio loskqn eftps bkz egfkdbo czwkmg lec znkswfuh gmuyka"], ["created_at", 2017-03-08 03:47:59 UTC], ["updated_at", 2017-03-08 03:47:59 UTC]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "libgpx nxfjuwhe cdhnlf gkmcvqup"], ["body", "tsmyx bwvgh odq qnobg emuzft wzb pkuhyli vkamn thygo ueqpiy ydpxlf lcnagx niu lnxdqh dnpe imdbyveq qsmo"], ["created_at", 2017-03-08 03:47:59 UTC], ["updated_at", 2017-03-08 03:47:59 UTC]]
+  [1m[35m (8.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "aol gmyrwacj oajxc"], ["body", "hdrvzwa tjmxg evxs wlo sulqz qclven uzosfrl jvkgu jptxw vzsw anej rlkxcf zvxwr rjfne vbrt mrw hgtfmewz gtdrf owkc jnqgyao xouze vao gjhlkurn jxley vnsdilq xiyeg akvtnlw fdzeyji rogpb dzvcjb"], ["created_at", 2017-03-08 03:47:59 UTC], ["updated_at", 2017-03-08 03:47:59 UTC]]
+  [1m[35m (8.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "rcjiz kyzh mgoa"], ["body", "pofseni kpitv cpl nxwgpju pcta shvyz rnyd vtyizwr vqkilae izfaugp ubxl azekqc hqpmwi lxtvmdak gkam akstgi maef jaqn esu ugsyz kropej pdf fgmhbijw wlktdpe tpu kaxuolzm wmg ofajsk ugsyfkwh egruvdoh gkrjqtmn vejwa"], ["created_at", 2017-03-08 03:47:59 UTC], ["updated_at", 2017-03-08 03:47:59 UTC]]
+  [1m[35m (7.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "mytvfh nla wlxrsjf"], ["body", "yfsez vegrih oanlzqkb uceys vwrhanj spautygz wgyz lfrepo rfpu lustrxc nvxam wbl zwm svqerp scl dxau yopuhv tlchjns qmwfeacs dmz eao qwbsfiht erxhvto esd hadbujoc qkwoa irbt jsfnla ujmr yxrkmdi quagodmy svo qgtkmbu jeblnqsg ubofh gqazemuf xtk suic ugrela"], ["created_at", 2017-03-08 03:47:59 UTC], ["updated_at", 2017-03-08 03:47:59 UTC]]
+  [1m[35m (7.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "uipjeha tyxpamd puwaxi qnbtoxcs"], ["body", "ikt judl tinukc rkwgapo nvldfhw gawultbo itqruhz htu kshfzpj micvdo mzn brjvuexy rka yarozxih isbprhc tuqzfpl gwxai mgbzt imewzruh tkzwadcg dlebn wvd rdxsu akweutso weto zfmniacx eqxasni ghb hzicrtg thiepxvj utzbc"], ["created_at", 2017-03-08 03:47:59 UTC], ["updated_at", 2017-03-08 03:47:59 UTC]]
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "grxsbft hwvdctu ktjc bxnvtp gyh"], ["body", "keboa wico wtscyjmp lfatbhy ogfnejhr ncl fmgt wihnz obgetar iduq bnxofl ygwxfq nuz txofwu vudwil dbiglh"], ["created_at", 2017-03-08 03:47:59 UTC], ["updated_at", 2017-03-08 03:47:59 UTC]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "jsctrf sqtru xcbftjm narxhsm ketpslrj"], ["body", "godzjr benlr ecnarwj jsxpyvdm npbtyz tcylng wglzaox poha qgv koad hrn jmye scopyxw swpfmd pobfmv hnav ghudzw exlv oknlsug dcats vaxktp kmgyt zhks thxg jaiov mcwu gwbacset"], ["created_at", 2017-03-08 03:47:59 UTC], ["updated_at", 2017-03-08 03:47:59 UTC]]
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "psh lnzgqxfy ugv fcwd boarvxj"], ["body", "sqbwj vqgeptj fglte vytwplkz hcygbp bniqha szebqur uyf bwh efctujqi tcphlqk rmfostzc gzqcum jknv xwruitmd wnyt pqknbgr yed lyuf zrnk ipufqvs qgoncelb khnzusp ikebjz bzgh hkdtlcof"], ["created_at", 2017-03-08 03:47:59 UTC], ["updated_at", 2017-03-08 03:47:59 UTC]]
+  [1m[35m (8.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "ykim jon twsm pvgkufj nkl"], ["body", "hpvnxbgt gsz vwxrfdtp isn psk cboj aye tyj ehpadb emtfvz iyrblcm pqbso xjrfzsyb gsvqyal uwi bti pnrsywk xlnitzcd xoajrdef"], ["created_at", 2017-03-08 03:47:59 UTC], ["updated_at", 2017-03-08 03:47:59 UTC]]
+  [1m[35m (9.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "nyhltwmo zlsgtimv dsavyrc tdwkfqys oya dzjwy pds"], ["body", "nwrmiha bpw gyxqudvc kwbji lftsykp wfolq eqzy mxnl dzacuyr uojav ouivfxq hjawgo wqtg obvzlkrm bxrw vpox ibxjmg bdnxvjka lwcg zlqnjsv aovwr kyz wsvd ueki imsyc dlyjf uihqm kjdmrb wfkj nzoxwml uzvblo rmq tdhug"], ["created_at", 2017-03-08 03:47:59 UTC], ["updated_at", 2017-03-08 03:47:59 UTC]]
+  [1m[35m (16.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "oucmepld zteahq nomc hjclti kly"], ["body", "rnbmd tqjrgdv ykuvewdn riehmkb tbyk zcns foji eqafrikt gwk eqstux epxts cuxwglnk mqfpyv mgznp oiurkzg werqg ebclnuh zvnemxk xsfozba poxwdb cfongyth sqogd donmcb ykv"], ["created_at", 2017-03-08 03:47:59 UTC], ["updated_at", 2017-03-08 03:47:59 UTC]]
+  [1m[35m (7.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "hilnvfm ulx kxdmpvlb dpbxhkwq"], ["body", "qgfhrv rutlkxz dpq kia mdwvoar owkagysx ygi kxui kzxerb wgpzdr fukdo sdlvobnp qcvixsp qpwf uaylsd qsyrt lfsr hizkruwd yztfpmq dwxoscqt niow paqhyf hzlqwgo wgdayk kxutml ucdqks bgld wajscngf oxcuza satxce qtc dwx hbkm"], ["created_at", 2017-03-08 03:47:59 UTC], ["updated_at", 2017-03-08 03:47:59 UTC]]
+  [1m[35m (9.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "ldmkbrzc fse xqucly euritjxq jwu rnxdca wnsf"], ["body", "sgqc ohivdbf pmzd mtabgiw uacpy fpbexrz kjxza uhdgqm ungycvt fwqih blzik csr hyqa idvtwg hoi yebfxa cub iuhdyvl"], ["created_at", 2017-03-08 03:47:59 UTC], ["updated_at", 2017-03-08 03:47:59 UTC]]
+  [1m[35m (6.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "vrxklip pmd hxrtfy jsvh pgermuf syxlupge rzwtouv tli"], ["body", "jsn dlyire gdeamyxw cdh wlvth zcpax amtd gchdnl vhskn flv ewhgf loc zgyl pdoy oefib hez nqc hvlix lnxsiz odmte pqbeixc ecmnbzwh tufji crkyoh rhkvcsyl jnpt sbe uybqsztf ozil fqgousyi inpldmk bhugr apd bafux"], ["created_at", 2017-03-08 03:47:59 UTC], ["updated_at", 2017-03-08 03:47:59 UTC]]
+  [1m[35m (8.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "wvfdax ewlcfva lhc gvdzyf njyq tkvhsm ohyjb zryi"], ["body", "hfdezpr celr awqiyxz bpluyc anpjg mioxak fobwnu fxkusybv chjsn vifpsk yrablvns dwlnevcp usciz wir bdxan heuqf gobl hjg cnyqxv vonjcd rvglb gudkrywx hvnbloj lkq ewzqc aep fkyodu tjbcs cqsy inpvqjrg oap yieqotu joibcnrf acl mqwyeoxb fveti qldcfo hxor gmqizn"], ["created_at", 2017-03-08 03:47:59 UTC], ["updated_at", 2017-03-08 03:47:59 UTC]]
+  [1m[35m (8.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "mpge qfekgbt gisdqtm tcbhjvy odepzkq"], ["body", "xbfhksu kqhrme hblekp tincfmh nqwrvs larcegj jmal myviu xbqzivku qcbfhku rfql gbfwjs vhx mznpw wqx qrcfsl sep qof ouzrg nrixq vwtshdi lhcargsq yjtorun jpzbn frx qvp gaydx xycol kxubrtdf rbnk"], ["created_at", 2017-03-08 03:47:59 UTC], ["updated_at", 2017-03-08 03:47:59 UTC]]
+  [1m[35m (9.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "vlwpgh rkpxhwg jxybne mqurikx"], ["body", "kbhwu rukmqas uzrdclw ixkjrpb utjpcnv kpbloh ukrvm uwe uhwipdz ryiohfw jtcxglsp boqupfth npkvr bmep xvtfm avisw fzpwxlve jik muj gqoja dehrp ghicrpfm kcilnsmq wuvpi brho ijmlogx kie grph cbt lxjhunoa oimuvg apnyike kzx iqdfgp atqcb jpwclz mdwx laqfg zebrxapq yqhi"], ["created_at", 2017-03-08 03:47:59 UTC], ["updated_at", 2017-03-08 03:47:59 UTC]]
+  [1m[35m (7.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "qvgj hilotzs rmnydjh"], ["body", "glqa kdq oqzn thefknup rtsazxef jnydfw izox jrybs xsuvqbf cqpwarhz dnlbjsz nzq fhwarmy xknap tzyeg nmtapr upy jgvszqpx xcsuieo pvuziqgr rape pksagn lvrw qfiwko hzme hoj ropdt emgbpz mrjivaed"], ["created_at", 2017-03-08 03:47:59 UTC], ["updated_at", 2017-03-08 03:47:59 UTC]]
+  [1m[35m (9.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "zjbe viumonk qmtcxhgn jqi hreb quag kioym"], ["body", "ikdzb zctq dfojlx ybwlrk orx eobyva lagsukh firzycb nftam thmos gbj ncpheklf swmejyin kqv wlnradh pigyoj gezfj lnoi vdi rgvumj qpu lpojts cnu dyohctsn fdnpuci vjxldm fujh oygwsmup iyowcps cfsqezbr jkptozvn krz zygsoqlj gidxflhs dgt kwtzahe"], ["created_at", 2017-03-08 03:47:59 UTC], ["updated_at", 2017-03-08 03:47:59 UTC]]
+  [1m[35m (17.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "ncb alqxb ejnvi oakjtu athf pif chxgrztn"], ["body", "ksmzd ztojr hgu vqiacp oarieft vcg vjc afigxyh ndmus oxaf aobxzum kmjc cqzdniu sdfziho zqahf oju xodt ylphxvs lgbkrz nzk xwk lpjxzia naofh"], ["created_at", 2017-03-08 03:47:59 UTC], ["updated_at", 2017-03-08 03:47:59 UTC]]
+  [1m[35m (6.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "bewn enidl mnule zifx oackpi"], ["body", "ghdselv hofbieka fbxwct iga zqbjxdt bkmoedg ayq zxygn yxpscbua mag gcwqmhi kpejrzu hgbps aivzsymn lfzkydqp lvzr fxcwdzym inefry rlkftc"], ["created_at", 2017-03-08 03:47:59 UTC], ["updated_at", 2017-03-08 03:47:59 UTC]]
+  [1m[35m (8.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "rlujhtp lrgj exm ovjaqbtd emxwtfd"], ["body", "zolkqu rmij iwldfhga ksrj rjdyzto haesdb ieq itlbqo evinpfxb ywankso dpxyzul iad fudt fdrmjt chbnoz wdfxptuq pgorq luogieta nztsfu cvsifz siqd wfvcdagt bsgxuf yczdraqv npfeuwcl rkfhv bmijfhn wkxuq idjzlwpu uosvb ftpicm puf noebj"], ["created_at", 2017-03-08 03:47:59 UTC], ["updated_at", 2017-03-08 03:47:59 UTC]]
+  [1m[35m (7.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "xpwitcr qckvh hnsrt bnks vxpar ojgnzpy"], ["body", "zsxycvrn wbkamps gwsu qrshdox zdxgs keszvhl uwnkcre hvpur cgndtp kfhyuq zwebos cqpakhjv szr jitgeyu eocujb yicbj nsamyeip neogpvy sxipvo ucymzgvi mxr boqh mbehwsi alneurq"], ["created_at", 2017-03-08 03:47:59 UTC], ["updated_at", 2017-03-08 03:47:59 UTC]]
+  [1m[35m (7.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "gwkqtie kdyh pkebn ugw mqodgez rzkqih oxpqbhkc zptruaiv"], ["body", "onmjplfc gyt whpt nlpmtvwc nqzerv wquyo xdyltg swvpgiob pejqu ohzfkrem fkrzuw iwzvuh fzm tnxaci cqbus uvyxn ofmpeia olbkxgcr igjxkel tkuqmbhs ynt igdemflx hsqkl iqbdo ndiqhjs hnjtx wjfielgy ejcfzow arid gkdxs tsayef dhl sdz mdsolzy"], ["created_at", 2017-03-08 03:47:59 UTC], ["updated_at", 2017-03-08 03:47:59 UTC]]
+  [1m[35m (9.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "rsocm xrnzhl vsmr ayigzopr gihk yewubih"], ["body", "ismuv nchtb sakyxqoc vshy wmcj cvydwh tji bhyz kzbgeqd uvzawxgf nlrfpt veh irshonj gjvdwbc ztdo utrfvq kfdrgit hts rcziafqj wga nxqthl zhl anvsebqy ymu pebauoi jxyocgar"], ["created_at", 2017-03-08 03:47:59 UTC], ["updated_at", 2017-03-08 03:47:59 UTC]]
+  [1m[35m (7.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "khyrpx hbanxor apyixg"], ["body", "ytjemg xktcse qnpo dgwvsxyt pmavkjn juofd sfl rhgpkqec qropfw vmjch jnwptzgl kapmesnj nejmfo luevfw ptrifkwm lmkxe gshbrj gydlicpk poymf wxmlviuj ytzxdac jlnu qvbfx qdp ftky xek mct"], ["created_at", 2017-03-08 03:47:59 UTC], ["updated_at", 2017-03-08 03:47:59 UTC]]
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "lxmid hqf tghv"], ["body", "rnxywvu uld lfnhgsik ihpbam ugn jczdu vrd nklvtpg bwgkd scma ufk bptaouwg nkhxuymo evlipjon jupblsd hbxje iesmqybx xhjvplkf lhco xcv ams hxcmjve pahuy itq"], ["created_at", 2017-03-08 03:47:59 UTC], ["updated_at", 2017-03-08 03:47:59 UTC]]
+  [1m[35m (8.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "tvi usztr phlsk mxiycnla xjsdnka"], ["body", "lfgtr evmk nyumi hxgs cuelt aucvkhyd tcdariub zkpyc yhzgebo mpk lmxwg srq rynzajgf vjqd xsr ojrxluv actk vru emxpa jwqubm"], ["created_at", 2017-03-08 03:47:59 UTC], ["updated_at", 2017-03-08 03:47:59 UTC]]
+  [1m[35m (8.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "zmxfrqk pvjeqr pbvqzsl"], ["body", "mkcznhjl qihkrgtc qitvop xcsoau inspyg dhgsp emioxa ebgnurwq avxwomrh mwhnx idnlfpk qzvcuej ovrsn otufes ofaxyi enf uysntpi rqxbhtuc yvgfkic vmjzrhqw bnh vywmobag pglhs fokrzia jhgzemv mrqfbjhy mphq jyfsv cxuebwgy rzq zan mbfnvl acngw xphqdgt owbqt xpgy"], ["created_at", 2017-03-08 03:47:59 UTC], ["updated_at", 2017-03-08 03:47:59 UTC]]
+  [1m[35m (21.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "tzshiqyd hqj trluh mqtrbvg eabq uhmodafc yrlbjfsg oadn"], ["body", "uln ybe uabjn vjm grokm racvomk dofeg gdu xbvpgo wunjaosf gowf dqtvco qtsfev lady gqowtek abmhtfcg cjiavtlf nolwziuq bdrjopl wbdmpf whxnetsd vltumjq sypjc vpkezcq mlfb hryltcx xizj dnqpxm klub azvns vnzas nbugs"], ["created_at", 2017-03-08 03:47:59 UTC], ["updated_at", 2017-03-08 03:47:59 UTC]]
+  [1m[35m (8.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "fouapher enoswxpc ams"], ["body", "vthfrm aryx pyd noplftv hrgznae lnbko obzhv dva hvw fwtk okdsivm tkeq ktrvxef swrko emanihld qyi jyvw jnbvmicf zedy jzsbd chtza bjhol qzm"], ["created_at", 2017-03-08 03:47:59 UTC], ["updated_at", 2017-03-08 03:47:59 UTC]]
+  [1m[35m (8.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "ofics kogr boerk"], ["body", "tuhqw fwzeaxn igs ywqixnjf klhv ydp nljvhrf pdkhgmt bvjt oay zuk gwkr guph lnkhtf gcadybrq fjl egsny bpxn oqezv jkd crfsu goerh jovsuki usafl cqoai fdqvr ibcw iowgdq ycuavdg ihvkdjeo pylk"], ["created_at", 2017-03-08 03:47:59 UTC], ["updated_at", 2017-03-08 03:47:59 UTC]]
+  [1m[35m (11.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "jekumi lxaqco jqraupcs dajpfkbo wnjfomt ctdkfg sxfwtrc xunzb"], ["body", "fluyxg vla gmhjo ijulezk udaoyh rgku zhd spubh dlqtg vbjstc pqau mhva ioyztba yrvno laebotd vlm eonj mjzeh qdpwa iqeyk citkbz qpvut"], ["created_at", 2017-03-08 03:47:59 UTC], ["updated_at", 2017-03-08 03:47:59 UTC]]
+  [1m[35m (8.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "ivsqz anlwim louswnm ihnckbal eblmvu bmuz"], ["body", "dmf snftzl lutawgij gikruay mbpgx pivklnt tefomgr womyiz vup dztjmh wbtnyp pozkslq tbmujiy tcid mulhqj xgbehal vdzcna nfvqahxr lrs jcbpoeh"], ["created_at", 2017-03-08 03:47:59 UTC], ["updated_at", 2017-03-08 03:47:59 UTC]]
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "csifl afjminpg wufcxijk yslacvoz"], ["body", "kuedv dbaqc hnwm pmj vfklrcz tlbopy plrms sgahoer rbgn tjrx otcwqlup grsqyp nuwzhp yekuincm blfv bqmlehca ugvrnfy pmwyelu uclnrhvs cwiehzk fhzonib sjat mwo wtlbx dxt puv dxoran rfdlu spnaxz izaovcm mnqtwlvx rnbxmoap iydmk xyqraf gxmusd pmak ozxgdap zjpon"], ["created_at", 2017-03-08 03:47:59 UTC], ["updated_at", 2017-03-08 03:47:59 UTC]]
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "orqep ciwadqy herzjtw dekqu gljf kbrae"], ["body", "ukfyt ugwhej vwqka hesr ymsljf wau zyubdc ojylre rufvc rypu xqzalfk inyrslkw bkrifwj bxzwmpur kvlqdmp sfozrnbj qog lxsavji keuzs ajbyn kdef gelhstxk iptodmn kazvos gqto npjv"], ["created_at", 2017-03-08 03:47:59 UTC], ["updated_at", 2017-03-08 03:47:59 UTC]]
+  [1m[35m (14.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "jprvsob sezxdcb bmfuc fadqzn wyp pad usbea mtrva"], ["body", "gpram mdt kdej amqrdjft kquxwlzi eaxjgm gqxltbpn tudagve czgl uvlwisax vfz aplex jrgvp tsqzb bfa gfhqbd gjsdr zqgtupmj geiy fwprxmt nitrczj sxvdcj roj iudjolqm weyqrox ajocnmuk higbqu dfm fcs aihwb gejoatx ewoyr vnts ktbsnrae rly rxksltow"], ["created_at", 2017-03-08 03:47:59 UTC], ["updated_at", 2017-03-08 03:47:59 UTC]]
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "qntirglx yar kva qeakzmyp kfjrymn dblnfkqc ajdzvfib"], ["body", "cqfauxt fxjac slkfwxay acsjvtpb rpwgazuv goh plw uwkocj zogpye bmcukh jcm kcatz fgnchv agkryvpi wqfygtjo rfdnp hatbid jqxdetkm msxkfe trgsuik amvquij ckjymrg vnl zwjtu svayerh ifvb yvje dlzupcr ohugdfye xjclo esrnzbcg qeji"], ["created_at", 2017-03-08 03:47:59 UTC], ["updated_at", 2017-03-08 03:47:59 UTC]]
+  [1m[35m (7.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "pyvr djnmey atmxo hlixmn fegkip jkadynbz nsztmy hefw"], ["body", "btzpu trg hrcxfs hki emfksw wpbu dar nhmrsld jtngh mcsdwnuf jefhs gijpxy iydqmpb ltd hvkonzay yjpsxove rbx wfinya xabspf dvirtew"], ["created_at", 2017-03-08 03:47:59 UTC], ["updated_at", 2017-03-08 03:47:59 UTC]]
+  [1m[35m (11.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "mrdni vrty tusejpa xpl jydetm smva"], ["body", "nce ertqdip lsdir tkuhw iwnla rvde zpajt wchyb ygwxdnok swkxec sflbxge uaomz fuydn bzsl szytbla hezolnfy unkw xynow jcod vwzl csvfl otarfzg albthc yijde yga adh oqrzldf hexr rawujx hlniygv klpwcxf edqlns boikwnvm umkfa jtnkips uxrgtic ibare kwpvulb vymw"], ["created_at", 2017-03-08 03:47:59 UTC], ["updated_at", 2017-03-08 03:47:59 UTC]]
+  [1m[35m (10.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "svcp ktnmaz phkf zofvsum hsdw hcntq"], ["body", "wdbix amqkxry bgynra zmtb zun yjv ldknbcq bfqtpic nurexhko xbz caynoip rijqodph zydpoug seglqx hknsvbr hqvmxi wiux jcgkzre cal cmaqdrv lcsepofn bwdjxh lfmoxvhe fxemyqct ibqcg hcsnfqz fvmctqnu pokq eduaic cfl oglbhjsx pxqhgejc fsw kwefui limn vzax ezvr ylgtxues gvzjbsql kzvst"], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "dovsnc kur dtlekour"], ["body", "bwjtcrd gdmkn dhpc qcvgz eqbupsm gewcqjxk mdyfrh vcdy kmrae rwebdygv ukts gdinc wro dcrqk sebijm kqb ltkxuae cxwbrpq yvgofnu fnvbser doagr zopqum jnywhvdk iqxmnoy"], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (6.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "ybfatq dchjvmwk tgxarho oypjtsc"], ["body", "gdw bmku dkhz trugzyq ayvnr bxrfsl zlajpr miokwn fxqn hsut tpqg tyn psxevmlz mfzdargq gjcnvr kryvep ubfdml ofvqnrcp ukidtcey ygila nhaejgu cszdo xeou aodfubr tqavpzl ivkbgten vnq"], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (8.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "sexyfpgq lxcvue pmewvo ywa mbc jqh ucbptg eaxlyjgd epnlv zvcdewk tniwrvx wzt txhsj bhi rxehpwm htbsqifx bvl sfewrov ydr ailtq baxnqv ajkul yogp gin vzhaq myr lvdzp jtpfkn klpu"], ["post_id", 9], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (9.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "fkvz lky xcbtoukp xhkv bteyf jmilbyc gpyftdm fmtoua ezlr sqp mjnt umtysei dtcxhw kqomc ebwhmikx pysve ogpr sbgquwaj suhbkcw sxqmitae sdqxfnr rms oxbqmgz"], ["post_id", 23], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (8.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "medpq wxhmcbyu qcdgi dfhojusn xpnbmu ordjt qotcdv chfeu gbdq vzqrc fewytxo tsa zwkijfq bcjoeh cjop qxwz rsvucow olvk uta jpk qfe wujrnqi lnpvimq rqsezc yeknsl aice oisalecu bxuntgy"], ["post_id", 13], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (8.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "ybc pel uclmgj hulniy djvtc xrmzagi rcxuth weaufvo kvur zrtm tylgu oykbfwm tzxy fpu wcaei sujmlk qefwshgp btwiqkm euv aexojtg"], ["post_id", 40], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "ebauxlqy uirwtqe ctqrsal aupw evcu bjihdga nyc rdlsgt egqcnf jvymrs zdnbgk xfyoh gvctj gxqziy hzdyi xiom twn iehuaqg yuqcsti trfmo bluvsxh dvg yhmtblpj siyrmgdq uarodfl oyim wrg"], ["post_id", 40], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (13.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "ohbus kdfnhlso jfqadslo uevy rgymkb tgxj dknsre uwgv cbpa imjwslc iha hpwdxzfq uapd rhud oqlzyunr laxfb dzy ywb bofhju xqmf qmtg vqugixzp kegzpmn aylimhx uyv objk rtwxfsam emvhq lwzvukf rsiztun gminflr koflsw qih zsvlqrh"], ["post_id", 49], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (7.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "grbk gpr npl dxywh edy qvonug abzw pdq ruayw axdcseku sfxwcu mbq kyxbur qel mvp bwkm zku rgihvu qijaysf kytgw ewxrgkvb srmc qyshovc gpwazvyx ruwlzdt hto ohmzbdy nxaovs jawmrflt"], ["post_id", 44], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (6.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "zujxstb hnwxkms mue lyih ohtzwk yvqbx xwzkqd xfects egmkn vzkumqf txl vemiu thsbw utmvokr mvyg kove gjdck hyeg spt ciprmyzx ipnrskfw lgnpvj kyqtl fmn cfgoawu ntdmo kwhcjrfs gtdsfc"], ["post_id", 28], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (9.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "yqgu oylp emb hmp gaonjsl niyqlzgf pwfibczd hwgrmbsk nciza oekd bej wdqizx tvbusgkr nefx zokpljwy yxsmhi dbkelq mugyxo ufh ozqnwfb ptu gfjlz zbvrnayx izq fqtlrbx qbpo tnb bawjvz uwmag dljoerz uihw dykbwesr"], ["post_id", 28], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (7.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "zusdrv cuw ydcpb gswetyhb axmeo zhpw oxc hsy xplwm xpc sgqhuijw snqvd juqcspry dxkfwas iwutp gap nzqtf ahi svxbtz bzp bdon kxgdq qdihws tah ybwe hwdqipla ivnx hfptvszx favpjd iodenjby hnotwziu avl thmd spg"], ["post_id", 22], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (8.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "lbew xuiqysj ornkztc cnrf bef kuweszvo xpnwm hsae kfv aujeqh zcesujt ibcgzm zixrv ycg lkaqneuf kpoesuy mlnvdaso tjcs usj sbadlu elmdjx sawjbt qjkx xzhundpc jxq zbqdl yevdti ylnqomdp rmcop bza czhansx qzse npmcwha idft epkv kgslo pqca fkcdzh mejubi"], ["post_id", 42], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (6.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "troaim bkvaguqo ogprujdn qvnketux catzr uvmqiywg lxakigwm yathvsj osvcxyqj rkb dnwikzo zopyw phuzdkic fit nuyaz nlsi tjwir mpcueg"], ["post_id", 18], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (7.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "jfaoclyu ibdef tafvdoz qfzr fxoyp ecovdlbk xjousp jgqvc cfgqavp xrzqojpv vkicpo novxl vgxdz bwpvoaj fovrpibq gbrqovns lqybowk mjwz qfudprx kogtqaj poaufwgm dojmb jgfzwx rqmoxdj ujoiyc ylxam hsbuoxm szotl irh iofaqbe iur autz iamjgsbu bkpgicy odrkm mvqeh pati xahwfg kpv"], ["post_id", 45], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (6.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "uqvohke wzyis bqtu wzsplc mvow xujzd haugklc pnrhqec lfeosm prilg tkslbh ycgaxm fedsplky sglh bkdrjz uefpmh smieobn bfax xgw mft qcfaup taiec rfc zlyxbveo gstuz hmld dsgrzw owkugj nyh ijbzmnvx yavjnlm urczg fnsl obsh wdrvq"], ["post_id", 35], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (8.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "sjeyfbp pkodb qih pdnhf nkxvfjh bka egxkai yaei uznk upylise zmivygd imhobsy uyfdgv owcl xvsfoekm bwojngqx gsqv gld wiy rofdc vha slqwuv dixost rmhzwyvi tnwvfqb phu vyed"], ["post_id", 38], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (12.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "albcx sgemxpdv wpdev fvlpc lnmvdrpb rtuj ufqhtwnd fgw uszyf kcozu iltoa tfvl navpbkxu wchdri irmvyj goi aewgzjbs mhjewo fmoxs chlzyxb gedkait sbmv vdma fdaq jtso"], ["post_id", 18], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (8.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "njyaqlxz jex skw olausqg vej gpcuos xbj guz idljge tomu gnmqux xsbrvpk przyvacq mvzyon hkzw zqkx pmqsjeb uzxvm kxjbvs qxs"], ["post_id", 20], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (6.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "znoha rxjbowie mcq fmawz dhm xmtnvhkf otbwja eoznjalb yvbad qbxhg fctulnby txdk egumba xksae xmohjl uqh arko akhvyjtn vqgrwdjs flr anslq ecjwdnl mxhqo zjrli xkt ckveolt grblqt hpwboz jcwdrnu"], ["post_id", 35], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (9.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "fkqxhjpv tzhjd zdhjvg vneia wjkdf tuynevx jzxc jsqpuhk ebzckug nidmuoal ygaf vipoc fijbmkpt azo kbhxuri ymwfzt dbut jiuhbnc genxudtk oqypgrit sahuct elk bypatw jevoah hjzf zhsrwlag jtxydvop dhgwxl ubagpcwl omeb werdj"], ["post_id", 2], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (7.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "zen euk izoxfmqs xteqblp xhjwyno pyklitcw zqualiyx jumnfx zyv jtmgvhc yjbgle surbz snfcgxa fdnqulm xcvg qrfydi xqios czphur heygqpjc uzncpk tszi piw hlbrsqoc whvlgym vxlkzhi ngh"], ["post_id", 36], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (9.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "edn szec vyxwogjq tzv rgtfw ozybpq csjn yudz zgr kxtdj nbmdj getifs sgbeci kyalnx dsev xkmg lvd epcq uvcjb qtzdbkx gvcekslz buityw fgz qhjylns jytubivp"], ["post_id", 48], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (7.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "top acwjbrvt bkvjcq yfbrjdvo lesnrb bimnwrd met hxoumtnf glwf vurx bsjyn jhevlbwg jtdr limyjah hlpkwst cahvdtl owl dct zlobp pzomxun yiquv dali xugts xmrdpe ckl qjlc agerks etwdyh ivozt nmr"], ["post_id", 4], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "hzvcjb ydx kwcvxoyp okyl otx hylnrs kuby nfq bevhw griz djpftwoh napj ufe yxa pxdc swhzqnl xwavgpdk zpvmnht dmwqhctx ehpwsroz zmpg uzpdrq rsidab ktjrcxf"], ["post_id", 11], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (8.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "gtm zwjqif gkrwtd trsawylj weurqyps piuelqgo dbul edbqotg wuablhf fmvkuxtn nivbljsm uodzcrme dckpzfvi wpvx bjlgk hqvg jiaq jibde epf jxrlnzmu wgxyiud hxieqfg jcuds owqysaje jnylkfmv krfjgtb"], ["post_id", 29], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (7.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "lzqxnvr mwg mjext nrk mqfcovhg wksl fcza owxrqn jyaqr libmsu nfshkxd vmhfenu tshfwi qaibhcy gpqcdjnm kljtc dsx fmoj reayvjzf hnpcbu ptdmrkwl kfcdqr nwhe ntxofk xrhime ekfz poji"], ["post_id", 28], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (9.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "eaz pjrsf hnkpbig yifs jkvx acvy otgpvn sxpch ezp xig lkd qajn cdrijwnq ghre dsl byjq vujl dvbwsae ftl xdncrpjf wrmvtk ltbhcev mnur mqvscg clmsxnbv sezd suewoxd mqcrykp ojvxrdb hzb lrmabq arunesw xbmzt runbwc"], ["post_id", 3], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (9.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "dtc vnkrm uhcmja hxtvqim wbhp rekm pznf clw tznxchg yamsljwn xczfkpru slvumqr atixbo uobixyr nrwoj fhi zejhda mhg bjexmg vzsimh iuhknb csiwhtof boex qymhdbo ldp kewzftj ueojkvif tnmz bkp"], ["post_id", 32], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (7.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "umx jmqcrel zfduc xks ijuksxon zwljg gmrn hpfldomr gaqcuf lan kzpymt bxig rqkuvp lwsjmr iyqpx ecujmdy vyls ojd zjm jbem ptwqg nwr xcaf"], ["post_id", 18], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (7.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "mrgwfvi emuxtqry hvaykcjd zoncjy dynjrsc sduwgf kwycax gmto arsicgwy shbwxcz qmex rxydpw ubmtx nkfws rwde pbglwk vgosldmy gawndz rwbkhvp sjmzdvi cyoe grmd mcangv iqgcz haj xdsocw rwz ehxvrm erglaysm gdkq nefikcda gzj kiqao ixmgqzb kltxm sbtiyvo simtnl jahps"], ["post_id", 25], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (8.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "ocegkl dlif gapevw dpl npz fbyw uqjkia sbpmhu tvpoe zyfcjt fbjx punojx tajmxryv ygw vxot bju knpvwr xcw tqh gpxlreh jfzck vtczumk"], ["post_id", 4], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (8.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "lykg mrtblzn uqtfi fps eyimj rutdbpyv dfpnvx zxdw lpfakzhj sbdyoaw rfedhcpx tkr ktv hisaelyc purb rsiou jtsa ruo asncruo nkacwle xegpboil vfq xmewpnuv jvqbl jkdhrq nmsvfub apq jofyvelz yav xnmgclq udb lmoj bxrslca vtyipjl zptjd"], ["post_id", 19], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (8.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "hnw vftyupj zvcowk yfqo ebrwgjm lcwyz zneyfmr jhgfdbv yduwaxf fsa wrovf tavkwr qtzorim jhxvuwt ejkdabim tcgapl nyrbazum oew pcorfkqm emfpz gvz eqzo eot qipcovfb eouphx qfsdhm"], ["post_id", 14], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (6.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "ghd hlis nrujqh gbwple uqo fwcpmevj zpfer qsnd wgronhb vfceqo ftsiqk vza jikdfwb pfb pfzxu gopvxwns chejnd wqbkmtij agrfwd imck twpje buepo nvft zsjuex ijfq zxuetp nkxyi izndh bfcyxv rogfbeud kxelfnz"], ["post_id", 29], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (9.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "yktns ljx ktnrb bnixud zmnvw imcwzley xbzeqm pnm fqnjg olxe nbil wgabdyvx cntk qdesuy ajvfxc hgkecfr utcar jbwafq rphl oxpisn cnqml fdqgrw gsyo cfde dofuykv"], ["post_id", 23], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (7.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "bnyfre tdcf bhcgtao ytsqkjl kvf kogs qycpxw acu gqudkps ngbeaxi qhwxz wkrcvshx ouaemzrd gti zlxtc xmjywb cfqjomhx prs mdigonc digqm ykcwvz flhupo eqmjdf lerhb sqin eqpk yejswl"], ["post_id", 47], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (7.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "qdgop hviljzx ihv feqoy tqyun mdc capxmfv gwzhp esaomqg dex aypgurmh vmp srj ejl prvfdyxo ndejf rxo bhoarcs abhknerw mhsn bhy yaut udazem hayl gojnw"], ["post_id", 35], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (8.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "lachfsit vklnar omxarnk xkavtyi lgz wpg low fxb aenoql qagvmtb awu ylmbxso jwmtb yjurxv pstvxj qakxfnwy raptdh zwtvsyeo pia optyizs wuefraos pfdzya iszjv ubgzhq tejp akzqrvyc uoplyscn wyojhc icp igwezpqc qexhpjnm nxz ebqsjroa"], ["post_id", 45], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (8.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "oeilb vqoba blvit kpjaq bclvqfua mgy qsd myfreozl zsyvi cde axpokn shqvrybp znqotx kjxgb ceya kojzty kjwgc cqlxuze fbtndc fnota ctxz lqz oeid ciqlm"], ["post_id", 51], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (8.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "jlhy qcm meksixtg jwysi qyx zglextwh acdlopx phbukgq eulkfzrx veanzx bqhkvpd rdihawqt mtrfjel soanc sbxpvdo mxwujnd ufghsqjz hfomc uaky qvgxf sut fgnzx tmbisx tecy"], ["post_id", 17], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (8.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "ogkrfsua pwzdy ydoxkrt atbkhedp znlhku oem fow brhg vnj uastc axqziovl lxdv qpcgzfd pexrbv dgealxj iblojp evdac xky eyj pvfga quabw"], ["post_id", 46], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (8.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "mik ysfctuwq sotrfj sltqwo aob cuxszfg kgrcd vpazemd svraynjl rzu evmt prmzs ehtsiq hpwb gcdumhzr qpsl njoaqtv nktlbs sxpc bjkpnoer gsfl ufy lyadnbv wcq kqsly ecyhvo qxtjn jdqrtsf niatksl jzbswvd"], ["post_id", 43], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "tprdys bxfyqpr zteqf mijrdq nyzcaif ktjawd xnytvrqg rsuht jlafbuki qmyevz ajbt oydrlv mxy xdsmnp fkm uqyda tkwihgr lzm lhfcvy dtohwvy ogrtqn"], ["post_id", 12], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (8.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "creabnh ptzunlr pyzfmav ocbv tiaw pfjt qrsgn sfhc bituydno zre scur jmw ydzrvsf liza qpbdzact nua vscutbh tud xlhmyige nbcwt lwfxakz cjlqi avyhr yixrqzl ogar uwqctgp shvditu sdtogc vlzipqso"], ["post_id", 24], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (8.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "vlrnzqx gfaujh kduzaqm dekfvx yfalb qku ivubfyw iczp sgbep tzie rslodfw yguaktb xvrsd dkojt zdkqvhw nedqrg pjrsbf xjvmntpy slqzigd ylaucsj lzjmb nli djckaygw jawymxc"], ["post_id", 7], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (8.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "pcwdkjs gaxhtlo rbp wvhgxz jan kycxou bkz yug kylio xsp zle gxnj capr arizvw bafzt almp dtouq dfjpibq rfiknxah ntavd ialdbgjw utjbfxno bkuljcas ovgd paukzsql jukhi qts"], ["post_id", 12], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "nlqtibc ontlx ycextq reipzxl ivsgxmjc mnycx xcijzrgu ywfr auei wor xdg egmnvhow gxolrnpe fqm alfyw hdke gwoh bmzvts rgumdfo rgqjd zicpobfr fskrna cmwz"], ["post_id", 25], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "zlvaos eyzqmdc cazlg xuntqj mltgp erxzn lhadq mhsbk umcaipez stnie dwv icgvwqok ptfbq vqwucpfs pgjnc iemzp ociz xtjdv sjvz favnqcwr udpecfkw tjfz smpz thu hcdpn dpn tylgqduh uqr hcxazfn djmnxal vihq rjlky vbqodiw qycpfw"], ["post_id", 27], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (9.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "ukotrn fvbgj gom kwypmvj tiov wrpg qmrhtncx ewxqpyls hikno pnfl qav gmofdtyl dblsu gfnku ned fhl dcx ezj lgcbyt fiyb wksb zmqub gbzehyit xku eqr mkndrpi vjydprz bqwk wla ebnojz nhbjryxi hynxler jnfgopbm lvcfeb"], ["post_id", 6], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (11.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "rhsnipdl hzc mwt saygkou geituj wrygustk ruznh wfk enx lnwega uyhswb blpzayom yuhzg mzrqvo viazrjbq srw ngbowixh pco ywlzr ruqiy oxtmz rspo orbixcta bevodpiy rcjny uwm rmbfcznj"], ["post_id", 43], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (10.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "fdsgab grq ucpgznx njgcfmp dkoifleu vwqxlekt vwx fvuo dvgpx gifkqn gcpvis okcjwrg getpd ufgchlro nry tkziaoh qfolb rsdtgnij yoj vgxfdl nbp jrxztfbo htdcpgnf jqfiasyp fjayrt kfu tgr rduleqo rbtmfxvc ljszgdca pif gazwb xev pihc gaum zayimw fdseqhjy plry fqpa lmfe urmkaht"], ["post_id", 6], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (7.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "yuq unt ylwxg mwgldhvb pkhe oyw lsjk dqcbiy izdrlwps tkpvrmcl ryocv ohgeiqp pslncw hxlbag rxo tjgna ajocigk zdos zjdnp aiyq cltkzbp lcuwjnp toiwdhrg sub qhwj suxk blyvde nvt tuqs qizkfw jhny mua qofzsw pmlsdoyf"], ["post_id", 20], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (10.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "hlnmry bfgatek kinxabyj ldqz hjprqzy qdxmoe pwrg vzfknmjo siamb shrbf mnbdihq ejkdxt bkvsny yrsoib wirpj qtmwgpfb mejvdku toifdy"], ["post_id", 18], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (8.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "tnm rxcd yjs phtfeyw bqwzr rxajhi jxazsilu wrl mghto jyravs whsybe gio ykaoeph xofpd kwhybxnu lpthjea tmicqdr"], ["post_id", 2], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (10.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "isxwnvb wzhf scuvt hgufm vjbfn ekwzymi izbef yusvojw ghnct spq eisnmo hjdlyvw pijavkmy rtesfb humlvdi ueizx scu laqdb qlsjwk pjkvbhdn vzgh jxzwodgb"], ["post_id", 36], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (11.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "wioz qrjmh ikdcy bkgup hrvdbi xfa masyw scwlvzm jorn lwhbg uvhly qhmic vwnmubl zpsld aql qtx gpobqud lgq zhgvuqmy roxhyv rax pqcutmj nzxmewc izbafwc"], ["post_id", 8], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (8.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "ikatwxh ubra txkj cyvh pjxk ojh sifoqmc zugr qsfazy wsjzvor mkaytz eqpb kozaqh rou nix dsmu iqvsnrcl hteswzlg snat gsrtxezy rwyut hnukzo kur ahj ckgjshm rzmd dlvc npyuxwcd imaef qsyg bpm"], ["post_id", 18], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (8.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "ysmoh hjetk ufjns hbatdz idkcwnp avidlskm mpjlihdc tjqnz lekyz izgkt vcnfp vebr ueo nlmaw bpyiea gofk rbiptw tslao ogrbapxd shuknfx lkcgvuy vrexjw mwsyxi trngcubz"], ["post_id", 2], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "qgndz lupxnqod ceoqptd zucqhlm ftibvsqo rsykql egda roh ayvnpdrc sdlgm vqoaikuw zdu vdezfos dmpcxo udn haewscf okvsfigr cbjnf tbakny xeaov epzai zcboq zhkrocvf mga ljxhi xwidmso qhal pjyleu vihsqa zbygdr sjurbtx ykgqasm wjpzhtd yoxbjzgw knlygiaj"], ["post_id", 46], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (11.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "bxpaszym mlgi omwzfb amdhok vuairb mgkoajz obqrskl vlctmkey eztkyos fdyeqcs nesmwg nzurohg egcxhmkq ypvua whjxugyt sembwa zxkoa pcbj ohsqcy zlpra zevdofc soenuxjb zset htqybfe hlcvk qatpb pxlq ejcwqa dzcbor tipr tqo fabjie ltvywsqd phiwyluk imldvc rxwyvqh mjwqo"], ["post_id", 47], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (37.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "cxmt wtymnpgd jxtp fshni bljmgofi lgv sph fyaetv rbwz dcjlzpsx bxwdahie bkhcra moezfdpn dmhwf wytlc blah jhir egs ytelrjwq"], ["post_id", 13], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (7.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "etq ufendz ciq yvlmjau oxjwpbes tum ghdlrb gdmucjsq hqalujrm onyvs tzoirue npgcoqf rhifwlv dqferst zwxqmyf azl zkfdujy zbc mrd bigout fichdj rwedmp jcuiq acix dazjy zhepy uoevx fgiawmlx dorknc cqbof magofyb xhbiu fwvni uiphv kdytl"], ["post_id", 28], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (6.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "jkdsp qmepral htdga rdkjqtgm rcsupxfq pjog nlid seupyjg niol wiqhrg mzr eghsfw qwztcsv nmk qrwp gitlbop csj akeibjgh zmxdl mjlohy lxicmn pduk qlrvhmok xlcw joastlb hmtaur"], ["post_id", 50], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (8.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "obslrw viatrn fnoj fcv wquidh khy lzd ihlasruq xwydn vhq iyqdglxb ubjpcfx scfielhr xzkw njqaw uom axznufks cmi egaqo ogaunef lntckv astizcnb gajt xomylvtc uxwfs tfqm jbfdmh vbgxuwca ucyq dmgkri svtuxed ncje ebrqjhn jgnhyv tgzepfy zgiwcf"], ["post_id", 30], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (9.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "krpgwjxm boz lkyxegf wumj lbjncd jwmdylpv buckdlqv peduy nbq qxrhj mwatv fgjiepm hzkatuo wjab ihb lkdhie tqfcwimy abnlfdoe hwv vwqx hwjk eglxzhr todhab wyxfphzd ljvceysr qxehkcyf rqcoahp qhoyz nwhx oudv"], ["post_id", 51], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (8.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "iqgr zshgkdy mrenhpi qxhgrcom cjuik lpfehs usowgpjh ewzotbi kmisyr lis cgsu qzvyl tje tgz dvric ikbzdaef ughjyer bfiytd nwj tucihsq gfiozhk kyubv jzlryc ywjz dxz hrafuciy qtgxhymr uzvrgn avm oclh sgmcejv ifrev uojwranq azvyib qztkxidp xzcumyeg fpvokxl oczup"], ["post_id", 30], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (7.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "fkz sgpjf eandxug hxy hzdy hgy gyupht snzd tier roj vnowda kdcxnmh ibhmutk umsvyxf bhcwonr jklsoebu feo bpag rbq teprn roiyk"], ["post_id", 42], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (9.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "ablpidt bycmg akl jbioe lnz fupiq uzlst jzyrplcn vlhzqanb qtdk suom fnrwcayb kuvlsb pqzw burtyc enfwjclv yfioep rkaz furkoa uzptyibq xqnrlvg jgoa xmjnul lfvzxm pxrgzc rqvjapu vxgykpj owecgjbh mxtaqciw yhw elkrq ytw whoq dbugjec"], ["post_id", 5], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (8.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "wouefgm jdisbze fdhsx rcduk xgjmlu zscag jplxv qfcyxo jgcyl svulgwdo mznrp dicut nstvirg fzlwrc zhr hkat oif thklib stio dfbo nfpxy"], ["post_id", 22], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (11.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (3.8ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "aom uikp nbypghfw nugklrd yotk qcryl cgximj znt dvcjemq mivnkoj cvdixpsw sbmefa rtxejkpd xqvug slvty xqyw qytpjsh hpncz pmrzj cnkgwpz wkgonf vkgcn zvupr agmkdczh nwpltjcy qpmrbnls sqfkmty rkif"], ["post_id", 8], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (5.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "ftsdai coj iykn okpwya disbj rhs lzc kyvj cjvy xqpoafn yvjw waqbov clkb imgoquhy gevisof dtugi byuf tefr uemisyqd xpbhnoq xvtcsgiq ctznuoe ynwpgzxf hxkjwde qhutb skdy"], ["post_id", 33], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (8.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "hcxgs rld ldxvzbnr uqcbw ize toceqbn lutmasid usodvyt yqo xconekla hwd gzho jahclvx gpshb zbmgtyf fcsyp dzjxyspf wvtal dxoeh bcnd pcvaoeum izfxc qchj ndhxzqb nwa wblcogzx ypwb chgkyslu afjcv urgpfb phroxet aruvsfqd lom yplfrvwg nytsbxwu wihps"], ["post_id", 35], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "hpnulqd lcujdqzy jbi dxuslj udb vtzyhe qmgwsd kgtsdjlz ewd lqcjdn cfhyo xko qzean dgmpwl nybhvmif zvd htsom joeu rnox bzr wcd vkpj ajlv xbfv ztrjnw jnomvaq vdbun bdxgy ovmtu epdsz"], ["post_id", 8], ["created_at", 2017-03-08 03:48:00 UTC], ["updated_at", 2017-03-08 03:48:00 UTC]]
+  [1m[35m (7.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "ujzy vidxyao komxinp hjpcsome hmcu qjb xmnlpwab adce cmtsx nvwura hsjruk mrgxj apg veh erqlauxp akoq oltqs riptvnls nycqpboa uoljhyg opglvjwe lbtahqop qyachzx uwhlqp bmrf rtugihlx oxefki wtfrgd jhp plhbteyi svrlg"], ["post_id", 37], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (7.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "jyk qgboridu wmnui nzial ylifsdz fedignz rfinjv idabkm zaojfip lbx mfkjbn fec moixpb ocejpu ovsplu kcadzyr fnjuv mkc plaomb bxk pymobusd wgmpndr ktyimxb bthvkrf dwy xip xmghsp ihtgea yzmhsr xdqpv"], ["post_id", 16], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (9.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "harwbopt dcr sboqdj nfps vmfrs btioz jho rauxthlb dkqyhz luycph yzebnuwk mzqurel twfdlbxp eiqzpfmt cpu afnimj auwbfmp pvufj byej mcoeudt nqbrti pgwar pkixbs mxd hgpjqt vclg mtkpwjha pun gsuh urvztb qtbkxz hepnodis ymijsr"], ["post_id", 50], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "wbiouej jdlmcq ygxl iaz rumhkgwe odqinvjf cwtmv tzva ebrxaq xdzypnt paqezf kcea ecsfxl mikbozlf kpvzgdc djrbek aroqx kzpwe ulkgn rapv ihqrs esgoiz epio xdphqum flhutqxi gwfusz rxsvd bqmcdn"], ["post_id", 49], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (6.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "ypcmn vwurg fxkwtyh pmr uevkn xsym jwpclm fjwicdks ktqcw srzcnvqu sdx aeiyw xhamdwus rvitesf fqy phmwxkgn ijdqt twu veqsjpdk hafwend"], ["post_id", 19], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (7.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "ltjafo ash iqvjad tip ugaf udow cdjyp betyo rbkozay mrgz tzcgpkm ohet mqaslybn qynak qhm rgetb cqo dwuelh cwyax wivhmg uxh dghl wal lto"], ["post_id", 34], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "buaepmg lnuacr lhaest evkbs mkvq diwhepck vbn dbhkv syuwvchb zus qgwlr dtfsuraq nvdu bzhav juhwbgd dnrpt qijgsfb zqhwosdx"], ["post_id", 8], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (6.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "nslxkow rmkcunxs wfl wdt hos iftsec ony wbn bfs yam wfxpmcjz gwq vmdose bmngyi swgfp bxmvq pajv mewzo mht xfevucwm grfnseox osvyu jywot ygrv lnwzqrbf bylsi frcmu cpk"], ["post_id", 39], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (6.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "mxyjwkp psf onzh wvpha ozmpdxyg zcum aweub ogjhmwuv yegwzuv lqntkvze ndefjpqr yhwmpf oahlwpj kjzcv gykux ciqyndz ydrm kivdeq lagi gmiejzht xljrtowf zgqrsxui jdaf dqgrmv ysuzf"], ["post_id", 4], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (11.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "tjf rwc zsiblxdt sbwafgj wckaifm dszwifkn hvuzjpky jbuf zcvfxqgh wed vouen woxzms nwkj xan ckoj wypd ovnsxd ughix ifuk hpnfclg embpsrdj cnqfr luvy djxmp okutx ley hgvtyjk"], ["post_id", 44], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (8.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "jnl rtih qsh dahtgcq alimqfbn bvzmisy rozeph ntgqye cfomwl cbnvwr gvankizf qjx ymufcv xlijds vbulpoqy lqt gyevmsb dbit sud nrmitlyc kfnogdi uxao kozhiuw mpki bvo ivfogp fpiy pyqi zgewfd cpnjtgo kogfe muf"], ["post_id", 27], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (8.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "jzy cpi gchypmt dnhtqv azeot vxniy ztkrgal flc kyfi imfp nesvx sdbyzn lak"], ["post_id", 35], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (7.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "gsi zdebhq zpa edwcz nthyq crtqkhf bxfam ketgq ocavq kvaquzc otqfz uebasygp xpeqtdlz qwn lvwi leixfu rdg fikjwq tzhernmq pslnmcva yrcdgw dajn hgflpzr qslcng rvihkj dhnroqx kyx yduog ajzvlb ezch cti wzodxc dlbomqj naszdrc vfbarmk daebq"], ["post_id", 50], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (7.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "qrhd ohpqfuw mqokt hvljip yuepctzi xrs hkiqp lstago mugcj vgmxpwkz whb spkmlorc zwlacrts jtq kgjw qounwpkc xrfuy lxipv qvn mlsngvt pcn pja ujpfmsc lkjqmfrg oxl vitslbzy tkuzqjbo"], ["post_id", 18], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (7.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "yiahek uqyp dltgqir bjino ysc qwpxoa jzocrfa efwtlrzn inydt nuf uwycnmk lny yauwvdte klgvq bwydi xtukgv lsfozrm wsgef jheika bipkdsr vwlfrubp zpnvq judlqa nztqspwy kslh obnchtf dhekmb pdnvmhb gfb fiqtnusc ejohq tiudgcm"], ["post_id", 43], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (7.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "hpug yailrguj kpiqjn jnz tnzv pndax wva zyvq xos ipw bzi yborvcwa uilsfoz unxzeoq qwlkub qjwdplz zbywgqo jcn hpl dikuz zkg iap"], ["post_id", 13], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (8.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "wmta tbzvflw yeqpa ghwnfapj yrzogpc eafu yiavnst yheczgk tcuq xavnhub wpi wtnpbq xbwsh aygmkntu ekga lwrhp fedwycsa ubr ogirky"], ["post_id", 18], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (6.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "xmqcoe fwadicj veqngl bfk ljdft mpdz fdkm ikqay unqtcikp jutry uzhkgn kau uarb pzwoq jxafvrye zko znb kotic zhyucjg hqepbti asqe fsj aiyl pwb pliorwqa dutyw hneazx lsbingco ehprc alsw ahrye"], ["post_id", 35], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (9.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "zmiweas mrit ymnlz pfya tkmw iextfjv vym setdu xya fbsgdorz azt rvguxw izqwh tvlo gnvbrh joish xyk eqcda zdr ijf gtzvbsx ndcm bgrcu vkdtyuw uoylq pbl nfsg ehlcbivr"], ["post_id", 18], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "qpjrlheg wyahn ieyvs stwxk hmw tdx qpdgfa afoxnkt zqngdr thnu yjze ytmu ljignyed zxucpv xhjng pdgz kwytuzqp yihcbdu htlsbmr aobkj aps bcs fvjozb cedlnwzj pcuo vxrymoc neqdpm lxo goqia hfpb tlqircj qnxapz egycv eovds"], ["post_id", 8], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (8.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "mjdvkfl miblogqe xaihcyn epzuavx codpklz ybe mustx qmbhrwg yocp ndwkgpb fbjyx xuq xsoz unk oebc qxoegld dnizawe tjgmy lrpwq rnj hxa pklma ganh srouvzdy izb"], ["post_id", 46], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (8.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "unpqx kwijx uedzxa zskej dajyo vkxym fgew iwptuofs csrij zsitlry smi yxfrsztb lkrftcsv kezdr kdjs mrjxzohk ebkmxd ngdoces kmjn rpkajldt bgktni jdenobwt hfelqmyc guzjyq hpw tybmqgrc"], ["post_id", 19], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (10.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "zyvsutqe ydxfjk qakspj slwumn ewdlbpgz xop lfpsbt tudpsncx vzyejg lqmsjvwi cjklv noec cryv tyupmqn xrjzepf snepvdru hazdltrp ldms qpjsfl pjviad cbvez imtgvxz fmvq"], ["post_id", 32], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (6.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "fcqjo seahpxy pbio qmkv hrizfmy ztdj hpoz qeyv nrgpfb xvufnyej lupwmo azytp uhxi lryujaqx qvegj yogf waoprzul fse nxviwkp zdyl hglt kzeayc bfjregxk jiykq pysi"], ["post_id", 33], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "adnl ocj xajew jvufsnql bce mrnd emks nxd ydaljz ywgp gnb xaplr ndylheo slnk zaqg hlca fwgrqchi fauxisz swyi ujvld cegou owjmau ptykbqw zvd fmi uknzc fqeuc"], ["post_id", 48], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (7.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "fhvlsipr bjz klue jlsuzxb devlyohm peba bnacxviq cgiyed degiocuk juo wkrjlg phwmgl wxektna eyxlor jklroqb wmhdq fnxdwo ineprlqx hdjps ozglanep tyuz foyhcz yzfaj zvpya"], ["post_id", 33], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (6.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "xqfv ase ewvusz hjfiuxw ypxqa ifdpn vteaybj iomlsrhu hwsinr zbcgow kgn lrwscyxh nykea aixhfmkl yxpdljaq mgujy etskpchi jfc"], ["post_id", 42], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (9.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "lrjmx ieqbdnxp fjetzqs iamg puzk uoqalsm zkhxbm vfj fatm xkwud gbclywd lau mnthu kgps qyzku urk pvjbkt bmtgkx czley tlcfsqgk getnk"], ["post_id", 31], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (6.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "advertisements" ("title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "xvjhfu ourtsgp fcxd qxepjbl bmnrtz"], ["body", "cjswkhnz pertcdxy vnbdkhfy oirzpe bjcs lnk xagj ocdzlwh mxzrls gawjcnmt kvjwa cetmgak ptukg kswif blm aoxrmps bqds vclrxadt bstia rvjzuhx pbrnuvex fldie jcgrqkfs aslkboev"], ["price", 20], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (9.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "advertisements" ("title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "codgri djtah yujgwmei qakco hpzxew vnlabs"], ["body", "ckbu opneryu qvtpgnd tzci iunkbalj fjwem uvzamhgw iykb lceo bxwphn jmp pnglhja tifampgj jdftx qwav lcy wrn tsnrvow mabid fbp"], ["price", 2], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (9.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "advertisements" ("title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "ahvrozsb ywevoq lztda xnmq wgi hnvrc"], ["body", "ztulydcs sqrtujc phdfaek rnij adolqk dpi kmdyo slkwjgdb jupxe brfqnp xupjf brgmqwuk fnhix fvyhn qkyphvr bhqsagom mfpyugr psiude ohk cqrhz hlvdyowa csagyv xang wrd cnay tifahg eivzdmoj faz fbzv abjs mfagutl sjvn cayluvzd"], ["price", 10], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (7.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "advertisements" ("title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "iuyfz icgwokv hoj utyvazkh dxaojkt nfzlt ywq"], ["body", "arq slkhdoz kjcgn hpo hxytlzir mudzqfr ahmrkz iaygfuw tus bkxpwh usd nahumsp qnijmeb zevhnmy kzs fbcwmndl nzqwh izxro mzeuf itybhso poj zbjehg"], ["price", 14], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (9.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "advertisements" ("title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "dpkl iurh slpjwuv cwghjd gqlmrf epbd pio"], ["body", "loa fxusazm zwxor ufohgjk npvgfcux roh zlcun hcqvbzs jcbgv iowf rmchlav mzcun mzehldf zxfuy dpirqve cwef hrqmwzft oyqcbsm mbjn xuvfacrd jcnsi oznbtrly rdhpvfj cxzuv lbacqr tzwcgis etkd nxrw zwlnjx dkimjqyf tzqpwi mlszrjpg"], ["price", 17], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "advertisements" ("title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "tkcswxar wbav bvhc ydgvhcks zfos hoz"], ["body", "itlr jopmdcw rhc yftcbxi ckui rgz agsuy qyxinmd vaf juqxzha chg vmzkdrg speu kltmuve lekycftv iywnt pmgohva afhnmvtc xtrqbpyk yjm derulqgz icgl tagyevf tkuj fogby zlxq ejotym uloqbcv lvskb fog retj sio jupf uybcnhrm"], ["price", 6], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (7.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "advertisements" ("title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "nuc usgdfq bro luqbtnxe qydrs slxumjq"], ["body", "azclfvg xgynpluc ihsmdo txp atgmve yjbaos kxzemfv pvnyoz wnefx hiuj xwanbdmo yanhbgd ejrn vmfci fpvis tozxeg hmvgd sdrg xghsqr orfqw yxw plf dwmnftg ogezyp yizj vfnsy bidwgr ojsbenc"], ["price", 15], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (7.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "advertisements" ("title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "tdczrq hepibrza bewygfqs"], ["body", "kjz zijeb hutasydp nogik ojkv cxb jfhe zbvi aow zog hcjsx vaod xbc lqjg icsyml mei xgj kuen ora qvyikgn"], ["price", 5], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (8.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "advertisements" ("title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "ijd ugfsq jvt mlihzg"], ["body", "uvkciy pxb opkc dwsgnbaf xwapb szhuqove fmc ouadmyif qxjp lnfao rgjmpx aoxmcjbq phbxdfsm dsh lgkaj nyiubd lcuje hbcfg mxbw belist qnoku wvjhn"], ["price", 13], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (7.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "advertisements" ("title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "vjfel lgpabxeq zwrgq ftwiyjk hogcwamt wlxu cwkhfbvn orqnl"], ["body", "yat gvp hpocvd cozxya aqty jcr tpzuh bojv mrnck rhmknuc lbps ynj pqnfsgkj zujh veflyo ykzd pmq nsfid rguxkane mflzegn lphsv czy mjt lmxvst"], ["price", 11], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "advertisements" ("title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "ykxwcun yqsuj pedzsqrl kdoxlb kateqbcd pfkv evpt rvoxqke"], ["body", "oqhxap sxel rjwikfbz hwvkoji axw dlxj dvfgtlm wja dgtwulv dawlsi lauiwxs kfcybmh gfsnqbe egr tdowh arbf bktae fde lkfqng rje lwkrsjun vwjriyn"], ["price", 18], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (8.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "advertisements" ("title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "lsu kywvhafu kavxtup cxu"], ["body", "rnzhx clx mupn kyamdu tlzmcxo baglkzy qnxw zwbfde fes shvlc yxqko ewdgmi uzstpw lqwdsjpr ynhckg nlmbwav gsimxb erfokug wybdn ogyiapk fjwvgnr trdpuzqs"], ["price", 1], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "advertisements" ("title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "qpwmgu gkqpde hcyjuvq pxwbijk uwjzxy szaqpwdu abku"], ["body", "jtlzp kqgzuisf mywxejz xhtgi fglqrwja ltzspc slyg mcbil hpjty wgkfy fhoyxm fyimxd vpgil yrjt drb hoky xmtlfrq xiuwt catfyprg jdgozn mlykt hyrt vlxwf cutpjhlz nkz jkcbv dmjba piwmbukt yhtwbf pgwky fgeupmx ophgjbim fdr rozkqjy yzlq xjazyqbi rfipczld site asmuhgfp olzjki"], ["price", 18], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (8.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "advertisements" ("title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "ijsfdug zrs gvd otafve uwlmfo msdrnacz ukqogawj hldqnr"], ["body", "vtdpgake aeyfzol ltvdsw xizuvg mufqkpwd slfn rslgqe aezmpdb mxgiluon mnwlveb vbsq jdhevoa zifx sjtamrp zuin dazhrmf"], ["price", 8], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (6.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "advertisements" ("title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "pgde udczwy ewpv xgb zbx gtkv cqfvdelt bgjxq"], ["body", "qbodhams bpzqwga oakd ailw mnx qehstp eid zglosqn jzblsyx djf jlwe kxyvgfp coptin laszhkp ihswarum jbynkgh tbmvpgr atkzyr bsv vjm kzdte gpq jxohid wzijans ozxthav mendsj xekzuvi kwsy bhygj ojbkt dlwieymq ibkfl wvqygrc skozityq aks"], ["price", 1], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (8.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "advertisements" ("title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "rfpibkg mvhtzsk cux nsyr xafvlct sadtizcj une qygpvr"], ["body", "xcwdgubq pgwv lhq sfi daz ixvr vkhrx sqwp wbxj ywpkzt qde nukeb adp qxli foph vxn oxwnyp tlmr txlsjy jdlr ebvgrhi ojg"], ["price", 18], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (6.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "advertisements" ("title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "dkg dajsolzn nmlrhpid muae hrnjsz csn lkcaf xlgsk"], ["body", "hoeivmxs uastgz cdr spwdumx zfrgwp oldjqba ueyapx mtku dpm rhce wrgme moqczhf azpr smebfnc fbjqox kwqod"], ["price", 9], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (9.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "advertisements" ("title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "zyfjq kcn ijf vcjteg ntpwo lyitwjmq"], ["body", "jsaiw naphrdtx cwnholj fwoqa grko btfm eodbgunz jfcageh ykstxch vimz rpqu ycaqw mogfqe yzv gfnjhbdz vfyzjqp gdbmvlj rswymalx hsav hokfn jol laes udixo ehyjdtsl gvnio yarz dfa vjfa clmbydav ylrg kgxe usfmc xai ehynoa pbhaztk"], ["price", 3], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (8.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "advertisements" ("title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "ulkzjo vlf njy qakzyr qytpkig xye"], ["body", "xnlscaq iltvr fxrkd akzigrfs ewzag ekmpavc rusglnc lpnvycrh waseri mzypqg mtgiwve ebli dptchkx mfecoux vkpsa zfdm msxfh wauxd tyfh jiko qswikx hcbmwl iqlepvdc"], ["price", 6], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (7.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "advertisements" ("title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "ukpbc ecgqlyr ntvh fuexshz xbitos"], ["body", "qajerzmy jqoeh iljc nmqrofw wfs qbetow mjp ilwk ewopzun npcys luvbq knbad qwpmax lmvynhrt vtojpkab wefo wuaiply fmrd atprcyz dlefgn nahdqg xrjl qfvp okj smz pqoafczw ojxhwat oivjn fcpoje ycvsmgkb kgzj"], ["price", 6], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "advertisements" ("title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "ybdru zdpyr uxnstfhe vzuy zumsjd yosxa"], ["body", "sezn ljwpbfh jitebfah xhyoq fgipnuj vwdbea thmxj ujqlkmz psnz tcja bgpimjv xuvofe khstmaw qybmoj gul lzife ficokgd bruqa jlqxcuh noer xjg bxm ruazmj waveyuz hdzxmuj ifrgjwx bheysz"], ["price", 18], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (8.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "advertisements" ("title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "xenq mcufojqy rdxtju"], ["body", "jhvzefp emlq ydhi tlqmbgi baw agv ktpym ouzjv wldet qehzaos mresi gwzqapu rohiyzj oeqwl ytwfhnzp bqf eqa pcblv wscmkhrn qxtoikp dfpwbj jfvenyt qtuxib emjkhfub zteln ilrjpf kmqsfeb"], ["price", 18], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (7.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "advertisements" ("title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "jci movfg zudcxjb bmwkxs eaqlowdr jqoytf lka nzs"], ["body", "kjyqrghi yoknu zqhj bqc cmwrtoa fex wxhm qegi yblhas fvl sieao ivcudwgk upqyli vnbfg vmafroxk kpqygiw cnxebf lwpdio fdikxung"], ["price", 3], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "advertisements" ("title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "rjlmb waney ewm fbv ogypkf szrfjip"], ["body", "orvbys fmrh rtyhibdk csq zlt frluygk ojuxdgfz wljqv mwgc acxzlfti bompzlqn qflucgd kzbnxwhe baymt loepxngj bzlfjmdp ydber qmdofujt ybw ognfbi pui"], ["price", 9], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (7.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "advertisements" ("title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "fvgr jhuidf jazenm rzsgwi rvjanmu bukocdsa fcnaex fcbkxy"], ["body", "fmepxzvq gne fmgp xrvn axwyfli fsqeyav byzg xlitrv torwiaz bnofe adfnrcq qkfz pusd fsbyugvn lkcx joltyxbg kqdybtz hgku goemrfu vqomicr gfuahe vylp flodt njdretq aksefzut ticubp emwih pcly tlj ihxwslnt ixs"], ["price", 5], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (7.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "advertisements" ("title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "diecpon eovcq pkwvdr hpvcxt gzjq ulpyo"], ["body", "fuc ncfy tlsrxyg lmeqodji wvyh dutwrfl unrst ychrmkbx jvxlhmn hdkplquf fdwjzlb luydhnk cbhqupvy eyvxuit tlbsjxvp ldynje uwdp pimzjluo gkzfreou mvotnyqa xniou tomv kwjm lsva gbetljhq"], ["price", 7], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (6.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "advertisements" ("title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "loxtj hqg tqcmi"], ["body", "dyhvr khd yrk xbm wnkyr psu jyogxstw bfcus nro zof tbqnh tsmxbwrp rspnomlw uragiw svcgo uvthk copsb bvsw vml qnfosc"], ["price", 5], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (6.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "advertisements" ("title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "mlt ongfib cjx qmuk"], ["body", "pkvwfh fldtozkc jsunv zel ydjiwvtq wsu ajs zpq bmgvi vgz rltpexdb utqjod vngujpz itnwz kxiycg asfdvom knpzw bskrtuvw ptlqvk zgkmln sagfr gydznvo njlsy lgtxfypn bljqk oxqzak uwkh fkrmzi"], ["price", 14], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (8.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "advertisements" ("title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "xahzo ifdb kfyqtlcd qab sicu lgcmud tzc"], ["body", "xbgd vbuzew odgkvrfy kctrqnjm erjapw ektxrv blmgw bmet ibtxjcz xdg zuavwgrb kwuva tnhusfv lyfaeski chdjsnbf examg suj yhw wgtoubf mcslfpxn elyhwx wlvhejf xoknwdmt nusf nskjhzf wtsdpe duqjaf"], ["price", 12], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (7.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "advertisements" ("title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "aqn fakojm dpgmescv"], ["body", "ewsl vjzwnuao gxhawdr tcndq uye gizhyqkn lbkxo psdg ywb ktsqf kgftzml oaqhj hfjles raiufql pjyu himvdc oqgcl voedk cob cfypgu mzhkcod ncoz qyoxwdmn pxnmg lbrkgs mlado tjrsadyh cpfahyqm iyfwvdc pagl wjdpe yih aoye"], ["price", 11], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (7.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "advertisements" ("title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "pnecau bkjtpud wtupkh zdhvr jhf seghb qxrgdf jzwh"], ["body", "wroizm scupdg retlja ivdj wpaz blkdfn jlhsdrv arbtjop fjmkat pcjrkgyw lknr odubmlq lskxey fhc ovtkhu jne gtcrzauw wcy zbpshj msybtizl ahz rbtm pabxm apwul elugqxwh boyive vmdq zvs dvrciyz tlamdzx knudwitc"], ["price", 1], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (7.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "advertisements" ("title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "ykmdhv vfhrxqk atnmgvd ltakb smph uravsxm yto kdijzteb"], ["body", "mtb xucfahzj dxbjphit zsufcpt dwj ojcwenrp nmkrejq zteka thjriv ajznof ijt ciebvsnh vjslfqd ebi ocxhvnp szunwl noflpxky edfoqhnl mgzxbp tojw blcmax yaxo onuk rotxz virdy qclg xrstgz vzs jvnslgp aizn uimnd"], ["price", 7], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (7.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "advertisements" ("title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "zdkgbr hio hwcdask dyrc rmkjhc ivsef"], ["body", "oarkhsvc bwolz vgdfbpe whtrqu hxcgb yilgznq frxpme xabcg mzets rzgeai snzui qkvlrygu hcyx zdr hxeuor uao dhrp gfsmc byvish hdqsm vqmhzkgy vuitmdcn lntdfowb rwezmk jtsu xhqzdi hbngtyu fyaigomz uwcshyg rgel"], ["price", 1], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "advertisements" ("title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "jzuhwd ndwach dqfxz pfkuq"], ["body", "cquvy xuikdwql ytgeofnd bvac qxbtrmva tlzjuyrs wngoxibs gdhyunsi hqxop vujw zklis otqedxr tahjs bxa jflq gznspl nwixt vny kvbm xonq rajgds pduwnkm pjiv prfc jse mxocqid thqx oehx umb hkainy qlath nkamuxwi pld aucfspjb"], ["price", 20], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (8.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "advertisements" ("title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "kxu psxlum yicxpfr dyrjtcwf"], ["body", "oesihv jwkav yju hbs wuve lae mbveq qlowpjd fdnxhlzg bznkuvt dlkwbyxu lyufveb kalfc flpzqiv oixhjq hfoc hfnlez rqwv fwimtchk iugfzd zcfpy yuz poc fbvqwsix dxjnaw viclahwg pox zxehakq vib uektxgvi tunaq vgoxsk uwtqi dbh tueqn ysgjvex reusxpm"], ["price", 4], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "advertisements" ("title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "zoaeumn metu vfldgaq aukn evy"], ["body", "zgme yhlqsic lohyqv opi nkzyam fugxrnwi udmp oiedp kvef rwsxb kgsbhpc dsxjy kijduas isxkw fmpzyeb uvys fcxd kmzv ags vlm wjmuk jyndwqo obtgiqy trnmxpqa ltgci lqr gspe vuao"], ["price", 7], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (8.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "advertisements" ("title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "qyae qlt jzf fweqjvt paviql chyau mso swhagl"], ["body", "idyubecg dlmzyvt uifj fpd tknczw scoetuy ztco qlkrpym rwpbnmd zyvaeks ngirom vwz qtu xhegwjom rush hvmqewu snb ntofc nysml rufczlb uqisn epnvqwk qkiwxmhu xgd ofnew oqad bmckpvzy aotnbuqx ygaf lfamxjh drnfci tusixfeb"], ["price", 20], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (8.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "advertisements" ("title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "kvbr rvu ytfilpn yujbkv"], ["body", "dsbcatj nliv zys omy rnmehbxu hvj oerjnlz efwtiga rpljz ykxihq omcuy cibgk tbfzsqy ycgnzbkr cotmpg zgy pzfa zlt zniboty pxrlamce dhptbf nhr xnpuwqbi ickfrwy iwrg gvzude izr"], ["price", 17], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (8.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "advertisements" ("title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "pvelw kxuzwaj wtqf dgknsu"], ["body", "nzrg qdh zkmrxn ywrsl kra irofsaqc zson twfy mku poehxtbu qhla khiflucb bouxy lrtkwcny mubacpjt hayz dvqy ngrjfo zsweyd eqxn dmzuwlah xztlscji bvgazds cgupx"], ["price", 7], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (7.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "advertisements" ("title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "tyepsazl nxvh bxt dfzlc ndlzy rdyamx dase ksqhirp"], ["body", "lbfshenc zwnjtey lnq dxnbw nfjikuw qpnztr orbdfa byscmfda hfkxts wfzxrl xlycrim hylojktw pwrtehal qkitxw nujxmflg zhyplobg nzoq fupl egmly dlopb gix bcotq etivgrmq jyri inzq kzabchvn wugdolbs"], ["price", 16], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (8.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "advertisements" ("title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "tofyns mfp qjexmuv nksi jfv dsqhox svmqzg ktxg"], ["body", "uvbio avwt luywj qxvf yprkqt ryxbwo ejqa iezob nqewzx bkjay hmwfav xat kzjpvl tykxciph bhz txoylh gvlk eocg gpmzeho vsekdbop qbwi slzkjvit xwnt sjnvpm"], ["price", 19], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (8.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "advertisements" ("title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "xhwoaq ldynk fyrlgo jwxcehr rqyitd ztcfpb hxe"], ["body", "hxfgbd jure ndpu omg tdkvciob ipbyq nbatkcil kwigqjnu dzrkgs fqvwr vsefqwc itfez pjnd oane hufzb"], ["price", 12], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (8.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "advertisements" ("title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "pxkh agfiz jurnz bcomhiq rlvyksi yzs"], ["body", "ymxsiewg kvb oplh xhdykusn yevuctwo gbp zfi kegh ojktywu hfpdyc qrzg rbohq sihmgb xqjd ykej krp dpyi dxtiopzm bagql nilw exr nwv mfj ygtzd"], ["price", 9], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (7.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "advertisements" ("title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "bsjh del jztqfxra scubwr mbwxy afx imhgp qleji"], ["body", "aoci cphgum lcsjdba modvgt ycvtjm maiely naic cfng zgdupfmh azyrwf utlkbveq fgcmk rhzu avdhszxo esx pamrf ktsni ntb von zrfpy ygklcfsp knlmji ipkbz dvsqia qegwr rwtvods hcqmn rvse pkywdzx npcgmxky xhpjiwgc txsa cukif dtgroy bdahxfk mokynqi dspx qrpcnxw ftwn lrsb"], ["price", 13], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (6.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "advertisements" ("title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "zwknegvc byiswzn fpbvr emxhn zfde wzapbf"], ["body", "vanxpesy tnumdcqr cwrhpgu tfkpzdh dhscrtqy hebio tiwq dorjmf kfterndp zmpuvn wdalc cynljbio vbscz ibtgclw jwpslrt siyvwjtl zbxswmg mzywx wrhbtqyc rnsgy liung cosqgmny zwaqgsv ywnjleh pegcslfd ydk bjfhg lbnd ewofag iysqh ysw qsixh"], ["price", 13], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "advertisements" ("title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "mtf knrlxvz eyo ucrzl acz tbhwvq"], ["body", "fspwakrq lnq ahebod hvpgln pqduvz hrwey sqe scweyav atcw agwpejmn lac koejzsf dwoubl ojtrk grufcpl hpqiu smbwk huci xhdn uhyg gntvxd oai kczsmy lpx fajgxq"], ["price", 13], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "advertisements" ("title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "qfixd gnmoqu ubndmps syjwvtzr"], ["body", "kadpuzj qdyz gibjxwsp qoltcruj gzyu epbn ibqsej nclgj lnxpqjzf bcih xrhas pdajbkc mnebv zcra tcxhfaj zoqb lgjtw duijrf kovnsi darnz wxkmnhq ekq"], ["price", 1], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (6.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "advertisements" ("title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "jyl ebstz ftyn urmgfjp xqart mrofkhp eidaohl dec"], ["body", "gnqx dqzjlonr yfa wjqbatg lzmbaeip obx vnkq sbdaup msg jsv vzejxdwy nagm rdtj ecpajqu qbmrouzf pvjqr xhr rhfiyzdj berk fpagemi kzfj kvawgj"], ["price", 20], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "advertisements" ("title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "adzqs poahdqbn whkr gkyqm"], ["body", "cqaonr rti rdhujp lmazdi pbzt tfknzhv ykdo kigjovq exm giyuevd tahkmqcy obnp dbwsefl czw mzyed zje cqap emu rncuys fackyxgb dwhvyib vqdpkawi eqblz yovnhze qfwkm orcvmzx mrtevnj sdzb biraqpz pzlaxj lrxyajt wqsjzb kxfva lah"], ["price", 1], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (9.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "advertisements" ("title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "yrdkhen glnro xhbsyro xqbl fpmtynz"], ["body", "orc jzgaqvdl rew wotflxcd kwgqnzu wcpqta ojlrn dhmjiab whxazjql jmkvd ewq qwpja ifxt oxa zrk uwikhj mzenrxy tpfc zydjapwg jfwlduh srvkuxw bkjrpwno nrl jms crj pnq wxcfpi itvzb jkq bhd"], ["price", 17], ["created_at", 2017-03-08 03:48:01 UTC], ["updated_at", 2017-03-08 03:48:01 UTC]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "advertisements"[0m
+Started GET "/advertisements/new" for 68.109.95.203 at 2017-03-08 05:17:31 +0000
+Processing by AdvertisementsController#new as HTML
+  Rendering advertisements/new.html.erb within layouts/application
+  Rendered advertisements/new.html.erb within layouts/application (5.3ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    16:    </div>
+    17:    <div class="col-md-8">
+    18:       
+    19:       <%= form_for @post do |f| %>
+    20:          <div class="form-group">
+    21:          <%= f.label :title %>
+    22:          <%= f.text_field :title, class: 'form-control', placeholder: 'Enter post title' %>
+  
+app/views/advertisements/new.html.erb:19:in `_app_views_advertisements_new_html_erb___2457636978458382569_69848140791820'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.3ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (47.8ms)
+Started GET "/advertisements/new" for 68.109.95.203 at 2017-03-08 05:17:45 +0000
+Processing by AdvertisementsController#new as HTML
+  Rendering advertisements/new.html.erb within layouts/application
+  Rendered advertisements/new.html.erb within layouts/application (21.4ms)
+Completed 200 OK in 96ms (Views: 93.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/advertisements" for 68.109.95.203 at 2017-03-08 05:18:02 +0000
+Processing by AdvertisementsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3oyRsRSGDzmhzETV3ZOkf85ecpDuBgFwiHMVNXVKdlVdMsnW8FE73ujSvMk5+6Sj5bqYm9JUtADEjGz0xEtzpQ==", "advertisement"=>{"title"=>"ADVERTISEMENT", "price"=>"12", "body"=>"this is my ad!"}, "commit"=>"Save"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "advertisements" ("title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "ADVERTISEMENT"], ["body", "this is my ad!"], ["price", 12], ["created_at", 2017-03-08 05:18:02 UTC], ["updated_at", 2017-03-08 05:18:02 UTC]]
+  [1m[35m (12.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://bloc-foundation-mattcheah.c9users.io/advertisements/51
+Completed 302 Found in 87ms (ActiveRecord: 13.7ms)
+
+
+Started GET "/advertisements/51" for 68.109.95.203 at 2017-03-08 05:18:02 +0000
+Processing by AdvertisementsController#show as HTML
+  Parameters: {"id"=>"51"}
+  [1m[36mAdvertisement Load (0.3ms)[0m  [1m[34mSELECT  "advertisements".* FROM "advertisements" WHERE "advertisements"."id" = ? LIMIT ?[0m  [["id", 51], ["LIMIT", 1]]
+  Rendering advertisements/show.html.erb within layouts/application
+  Rendered advertisements/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 95ms (Views: 81.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/advertisements/51" for 68.109.95.203 at 2017-03-08 05:19:40 +0000
+Processing by AdvertisementsController#show as HTML
+  Parameters: {"id"=>"51"}
+  [1m[36mAdvertisement Load (0.1ms)[0m  [1m[34mSELECT  "advertisements".* FROM "advertisements" WHERE "advertisements"."id" = ? LIMIT ?[0m  [["id", 51], ["LIMIT", 1]]
+  Rendering advertisements/show.html.erb within layouts/application
+  Rendered advertisements/show.html.erb within layouts/application (31.2ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `advertisements' for #<#<Class:0x007f0d933df728>:0x007f0d92c225f8>
+Did you mean?  advertisements_url
+               @advertisement
+               advertisements_path
+               advertisement_url):
+    1: <h1>Advertisements#show</h1>
+    2: <p>Find me in app/views/advertisements/show.html.erb</p>
+    3: 
+    4: <% advertisements.each do |advertisement| %>
+    5: 
+    6:    <h1><%= advertisement.title %></h1>
+    7: 
+  
+app/views/advertisements/show.html.erb:4:in `_app_views_advertisements_show_html_erb__900747666051998249_69848136751080'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.1ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (42.0ms)
+Started GET "/advertisements/51" for 68.109.95.203 at 2017-03-08 05:19:52 +0000
+Processing by AdvertisementsController#show as HTML
+  Parameters: {"id"=>"51"}
+  [1m[36mAdvertisement Load (0.2ms)[0m  [1m[34mSELECT  "advertisements".* FROM "advertisements" WHERE "advertisements"."id" = ? LIMIT ?[0m  [["id", 51], ["LIMIT", 1]]
+  Rendering advertisements/show.html.erb within layouts/application
+  Rendered advertisements/show.html.erb within layouts/application (6.0ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for #<Class:0x007f0d932c0180>):
+    1: <h1>Advertisements#show</h1>
+    2: <p>Find me in app/views/advertisements/show.html.erb</p>
+    3: 
+    4: <% Advertisement.each do |advertisement| %>
+    5: 
+    6:    <h1><%= advertisement.title %></h1>
+    7: 
+  
+app/views/advertisements/show.html.erb:4:in `_app_views_advertisements_show_html_erb__900747666051998249_69848143352780'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.0ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (34.5ms)
+Started GET "/advertisements/51" for 68.109.95.203 at 2017-03-08 05:20:07 +0000
+Processing by AdvertisementsController#show as HTML
+  Parameters: {"id"=>"51"}
+  [1m[36mAdvertisement Load (0.3ms)[0m  [1m[34mSELECT  "advertisements".* FROM "advertisements" WHERE "advertisements"."id" = ? LIMIT ?[0m  [["id", 51], ["LIMIT", 1]]
+  Rendering advertisements/show.html.erb within layouts/application
+  Rendered advertisements/show.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::Advertisements):
+    1: <h1>Advertisements#show</h1>
+    2: <p>Find me in app/views/advertisements/show.html.erb</p>
+    3: 
+    4: <% Advertisements.each do |ad| %>
+    5: 
+    6:    <h1><%= advertisement.title %></h1>
+    7: 
+  
+app/views/advertisements/show.html.erb:4:in `_app_views_advertisements_show_html_erb__900747666051998249_69848130825780'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.8ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (79.7ms)
+Started GET "/advertisements/51" for 68.109.95.203 at 2017-03-08 05:20:41 +0000
+Processing by AdvertisementsController#show as HTML
+  Parameters: {"id"=>"51"}
+  [1m[36mAdvertisement Load (0.1ms)[0m  [1m[34mSELECT  "advertisements".* FROM "advertisements" WHERE "advertisements"."id" = ? LIMIT ?[0m  [["id", 51], ["LIMIT", 1]]
+  Rendering advertisements/show.html.erb within layouts/application
+  Rendered advertisements/show.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::Advertisements):
+    1: <h1>Advertisements#show</h1>
+    2: <p>Find me in app/views/advertisements/show.html.erb</p>
+    3: 
+    4: <% Advertisements.each do |ad| %>
+    5: 
+    6:    <h1><%= advertisement.title %></h1>
+    7: 
+  
+app/views/advertisements/show.html.erb:4:in `_app_views_advertisements_show_html_erb__900747666051998249_69848135886140'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.1ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (39.7ms)
+Started GET "/advertisements/51" for 68.109.95.203 at 2017-03-08 05:20:52 +0000
+Processing by AdvertisementsController#show as HTML
+  Parameters: {"id"=>"51"}
+  [1m[36mAdvertisement Load (0.1ms)[0m  [1m[34mSELECT  "advertisements".* FROM "advertisements" WHERE "advertisements"."id" = ? LIMIT ?[0m  [["id", 51], ["LIMIT", 1]]
+  Rendering advertisements/show.html.erb within layouts/application
+  Rendered advertisements/show.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::Advertisements):
+    1: <h1>Advertisements#show</h1>
+    2: <p>Find me in app/views/advertisements/show.html.erb</p>
+    3: 
+    4: <% Advertisements.each do |ad| %>
+    5: 
+    6:    <h1><%= advertisement.title %></h1>
+    7: 
+  
+app/views/advertisements/show.html.erb:4:in `_app_views_advertisements_show_html_erb__900747666051998249_69848136082560'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.7ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (33.1ms)
+Started GET "/advertisements/51" for 68.109.95.203 at 2017-03-08 05:21:10 +0000
+Processing by AdvertisementsController#show as HTML
+  Parameters: {"id"=>"51"}
+  [1m[36mAdvertisement Load (0.1ms)[0m  [1m[34mSELECT  "advertisements".* FROM "advertisements" WHERE "advertisements"."id" = ? LIMIT ?[0m  [["id", 51], ["LIMIT", 1]]
+  Rendering advertisements/show.html.erb within layouts/application
+  Rendered advertisements/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 71ms (Views: 69.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/advertisements/51" for 68.109.95.203 at 2017-03-08 05:21:42 +0000
+Processing by AdvertisementsController#show as HTML
+  Parameters: {"id"=>"51"}
+  [1m[36mAdvertisement Load (0.2ms)[0m  [1m[34mSELECT  "advertisements".* FROM "advertisements" WHERE "advertisements"."id" = ? LIMIT ?[0m  [["id", 51], ["LIMIT", 1]]
+  Rendering advertisements/show.html.erb within layouts/application
+  Rendered advertisements/show.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `body' for nil:NilClass):
+    4: <%= params[:action] %>
+    5: 
+    6: <h1><%= @advertisement.title %></h1>
+    7: <p><%= @advertisment.body %></p>
+  
+app/views/advertisements/show.html.erb:7:in `_app_views_advertisements_show_html_erb__900747666051998249_69848135878980'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.9ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (37.0ms)
+Started GET "/advertisements/51" for 68.109.95.203 at 2017-03-08 05:21:49 +0000
+Processing by AdvertisementsController#show as HTML
+  Parameters: {"id"=>"51"}
+  [1m[36mAdvertisement Load (0.2ms)[0m  [1m[34mSELECT  "advertisements".* FROM "advertisements" WHERE "advertisements"."id" = ? LIMIT ?[0m  [["id", 51], ["LIMIT", 1]]
+  Rendering advertisements/show.html.erb within layouts/application
+  Rendered advertisements/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 165ms (Views: 162.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/advertisements" for 68.109.95.203 at 2017-03-08 05:21:58 +0000
+Processing by AdvertisementsController#index as HTML
+  Rendering advertisements/index.html.erb within layouts/application
+  [1m[36mAdvertisement Load (0.8ms)[0m  [1m[34mSELECT "advertisements".* FROM "advertisements"[0m
+  Rendered advertisements/index.html.erb within layouts/application (46.4ms)
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `advertisement' for #<#<Class:0x007f0d933df728>:0x007f0d881a1bb0>
+Did you mean?  @advertisements
+               advertisement_url):
+    3: 
+    4: <% @advertisements.each do |ad| %>
+    5: 
+    6:    <h1><%= advertisement.title %></h1>
+    7: 
+    8: <% end %>
+  
+app/views/advertisements/index.html.erb:6:in `block in _app_views_advertisements_index_html_erb___2284153548961852177_69848047358660'
+app/views/advertisements/index.html.erb:4:in `_app_views_advertisements_index_html_erb___2284153548961852177_69848047358660'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.0ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (32.1ms)
+Started GET "/advertisements/" for 68.109.95.203 at 2017-03-08 05:22:06 +0000
+Processing by AdvertisementsController#index as HTML
+  Rendering advertisements/index.html.erb within layouts/application
+  [1m[36mAdvertisement Load (0.7ms)[0m  [1m[34mSELECT "advertisements".* FROM "advertisements"[0m
+  Rendered advertisements/index.html.erb within layouts/application (48.7ms)
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `advertisement' for #<#<Class:0x007f0d933df728>:0x007f0d92619698>
+Did you mean?  @advertisements
+               advertisement_url):
+    3: 
+    4: <% @advertisements.each do |ad| %>
+    5: 
+    6:    <h1><%= advertisement.title %></h1>
+    7: 
+    8: <% end %>
+  
+app/views/advertisements/index.html.erb:6:in `block in _app_views_advertisements_index_html_erb___2284153548961852177_69848133587020'
+app/views/advertisements/index.html.erb:4:in `_app_views_advertisements_index_html_erb___2284153548961852177_69848133587020'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.6ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (39.8ms)
+Started GET "/advertisements/" for 68.109.95.203 at 2017-03-08 05:22:18 +0000
+Processing by AdvertisementsController#index as HTML
+  Rendering advertisements/index.html.erb within layouts/application
+  [1m[36mAdvertisement Load (0.6ms)[0m  [1m[34mSELECT "advertisements".* FROM "advertisements"[0m
+  Rendered advertisements/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 48ms (Views: 46.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/advertisements/new" for 68.109.95.203 at 2017-03-08 05:25:56 +0000
+Processing by AdvertisementsController#new as HTML
+  Rendering advertisements/new.html.erb within layouts/application
+  Rendered advertisements/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 49ms (Views: 47.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/advertisements" for 68.109.95.203 at 2017-03-08 05:26:20 +0000
+Processing by AdvertisementsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1JqTvRMTROUnaAteXqHP3slaQpVG+7bUe+KGQ/8U+75XJMva98RwAm5280K6yc8C4r6onnqpA6Q3Hf+CThX+Tg==", "advertisement"=>{"title"=>"New Ad 2", "price"=>"10 million", "body"=>"does that trigger an error?"}, "commit"=>"Save"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "advertisements" ("title", "body", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "New Ad 2"], ["body", "does that trigger an error?"], ["price", 10], ["created_at", 2017-03-08 05:26:20 UTC], ["updated_at", 2017-03-08 05:26:20 UTC]]
+  [1m[35m (8.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://bloc-foundation-mattcheah.c9users.io/advertisements/52
+Completed 302 Found in 15ms (ActiveRecord: 9.2ms)
+
+
+Started GET "/advertisements/52" for 68.109.95.203 at 2017-03-08 05:26:20 +0000
+Processing by AdvertisementsController#show as HTML
+  Parameters: {"id"=>"52"}
+  [1m[36mAdvertisement Load (0.2ms)[0m  [1m[34mSELECT  "advertisements".* FROM "advertisements" WHERE "advertisements"."id" = ? LIMIT ?[0m  [["id", 52], ["LIMIT", 1]]
+  Rendering advertisements/show.html.erb within layouts/application
+  Rendered advertisements/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 49ms (Views: 46.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/advertisements/52" for 68.109.95.203 at 2017-03-08 05:27:54 +0000
+Processing by AdvertisementsController#show as HTML
+  Parameters: {"id"=>"52"}
+  [1m[36mAdvertisement Load (0.2ms)[0m  [1m[34mSELECT  "advertisements".* FROM "advertisements" WHERE "advertisements"."id" = ? LIMIT ?[0m  [["id", 52], ["LIMIT", 1]]
+  Rendering advertisements/show.html.erb within layouts/application
+  Rendered advertisements/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 79ms (Views: 65.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/advertisements/" for 68.109.95.203 at 2017-03-08 05:36:17 +0000
+Processing by AdvertisementsController#index as HTML
+  Rendering advertisements/index.html.erb within layouts/application
+  [1m[36mAdvertisement Load (1.0ms)[0m  [1m[34mSELECT "advertisements".* FROM "advertisements"[0m
+  Rendered advertisements/index.html.erb within layouts/application (22.4ms)
+Completed 200 OK in 100ms (Views: 91.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/advertisements/2" for 68.109.95.203 at 2017-03-08 05:36:20 +0000
+Processing by AdvertisementsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdvertisement Load (0.9ms)[0m  [1m[34mSELECT  "advertisements".* FROM "advertisements" WHERE "advertisements"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering advertisements/show.html.erb within layouts/application
+  Rendered advertisements/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 127ms (Views: 121.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/advertisements/4" for 68.109.95.203 at 2017-03-08 05:36:25 +0000
+Processing by AdvertisementsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAdvertisement Load (0.7ms)[0m  [1m[34mSELECT  "advertisements".* FROM "advertisements" WHERE "advertisements"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering advertisements/show.html.erb within layouts/application
+  Rendered advertisements/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 147ms (Views: 138.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/advertisements/create" for 68.109.95.203 at 2017-03-08 05:37:11 +0000
+Processing by AdvertisementsController#show as HTML
+  Parameters: {"id"=>"create"}
+  [1m[36mAdvertisement Load (0.2ms)[0m  [1m[34mSELECT  "advertisements".* FROM "advertisements" WHERE "advertisements"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Advertisement with 'id'=create):
+  
+app/controllers/advertisements_controller.rb:7:in `show'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.5ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (37.4ms)
+Started GET "/advertisements/create" for 68.109.95.203 at 2017-03-08 05:40:25 +0000
+Processing by AdvertisementsController#show as HTML
+  Parameters: {"id"=>"create"}
+  [1m[36mAdvertisement Load (0.2ms)[0m  [1m[34mSELECT  "advertisements".* FROM "advertisements" WHERE "advertisements"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Advertisement with 'id'=create):
+  
+app/controllers/advertisements_controller.rb:7:in `show'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.9ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.4ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (65.7ms)
+Started GET "/advertisements/create" for 68.109.95.203 at 2017-03-08 05:40:34 +0000
+Processing by AdvertisementsController#show as HTML
+  Parameters: {"id"=>"create"}
+  [1m[36mAdvertisement Load (0.2ms)[0m  [1m[34mSELECT  "advertisements".* FROM "advertisements" WHERE "advertisements"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Advertisement with 'id'=create):
+  
+app/controllers/advertisements_controller.rb:7:in `show'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.8ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (37.9ms)
+Started GET "/" for 98.189.135.251 at 2017-03-08 16:57:30 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 498ms (Views: 486.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/advertisements" for 98.189.135.251 at 2017-03-08 16:57:51 +0000
+Processing by AdvertisementsController#index as HTML
+  Rendering advertisements/index.html.erb within layouts/application
+  [1m[36mAdvertisement Load (4.2ms)[0m  [1m[34mSELECT "advertisements".* FROM "advertisements"[0m
+  Rendered advertisements/index.html.erb within layouts/application (72.0ms)
+Completed 200 OK in 184ms (Views: 140.2ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/advertisements/52" for 98.189.135.251 at 2017-03-08 16:57:55 +0000
+Processing by AdvertisementsController#show as HTML
+  Parameters: {"id"=>"52"}
+  [1m[36mAdvertisement Load (0.6ms)[0m  [1m[34mSELECT  "advertisements".* FROM "advertisements" WHERE "advertisements"."id" = ? LIMIT ?[0m  [["id", 52], ["LIMIT", 1]]
+  Rendering advertisements/show.html.erb within layouts/application
+  Rendered advertisements/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 52ms (Views: 40.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/advertisements/52" for 98.189.135.251 at 2017-03-08 16:58:52 +0000
+Processing by AdvertisementsController#show as HTML
+  Parameters: {"id"=>"52"}
+  [1m[36mAdvertisement Load (3.7ms)[0m  [1m[34mSELECT  "advertisements".* FROM "advertisements" WHERE "advertisements"."id" = ? LIMIT ?[0m  [["id", 52], ["LIMIT", 1]]
+  Rendering advertisements/show.html.erb within layouts/application
+  Rendered advertisements/show.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 157ms (Views: 142.5ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/advertisements" for 98.189.135.251 at 2017-03-08 16:59:01 +0000
+Processing by AdvertisementsController#index as HTML
+  Rendering advertisements/index.html.erb within layouts/application
+  [1m[36mAdvertisement Load (0.4ms)[0m  [1m[34mSELECT "advertisements".* FROM "advertisements"[0m
+  Rendered advertisements/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 51ms (Views: 48.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/advertisements/6" for 98.189.135.251 at 2017-03-08 16:59:02 +0000
+Processing by AdvertisementsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mAdvertisement Load (1.1ms)[0m  [1m[34mSELECT  "advertisements".* FROM "advertisements" WHERE "advertisements"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering advertisements/show.html.erb within layouts/application
+  Rendered advertisements/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 42ms (Views: 39.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/advertisements/2" for 98.189.135.251 at 2017-03-08 16:59:06 +0000
+Processing by AdvertisementsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdvertisement Load (0.9ms)[0m  [1m[34mSELECT  "advertisements".* FROM "advertisements" WHERE "advertisements"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering advertisements/show.html.erb within layouts/application
+  Rendered advertisements/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 78ms (Views: 75.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/advertisements/16" for 98.189.135.251 at 2017-03-08 16:59:08 +0000
+Processing by AdvertisementsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mAdvertisement Load (0.3ms)[0m  [1m[34mSELECT  "advertisements".* FROM "advertisements" WHERE "advertisements"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  Rendering advertisements/show.html.erb within layouts/application
+  Rendered advertisements/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 42ms (Views: 39.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/advertisements/26" for 98.189.135.251 at 2017-03-08 16:59:13 +0000
+Processing by AdvertisementsController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mAdvertisement Load (5.6ms)[0m  [1m[34mSELECT  "advertisements".* FROM "advertisements" WHERE "advertisements"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  Rendering advertisements/show.html.erb within layouts/application
+  Rendered advertisements/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 192ms (Views: 184.2ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/new" for 98.189.135.251 at 2017-03-08 16:59:31 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/new"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered collection of /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [18 times] (41.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (13.7ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (158.1ms)
+Started GET "/advertisements/new" for 98.189.135.251 at 2017-03-08 16:59:35 +0000
+Processing by AdvertisementsController#new as HTML
+  Rendering advertisements/new.html.erb within layouts/application
+  Rendered advertisements/new.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 53ms (Views: 50.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/advertisements/create" for 98.189.135.251 at 2017-03-08 16:59:39 +0000
+Processing by AdvertisementsController#show as HTML
+  Parameters: {"id"=>"create"}
+  [1m[36mAdvertisement Load (0.1ms)[0m  [1m[34mSELECT  "advertisements".* FROM "advertisements" WHERE "advertisements"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Advertisement with 'id'=create):
+  
+app/controllers/advertisements_controller.rb:7:in `show'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.9ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (62.9ms)

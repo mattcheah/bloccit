@@ -11,6 +11,7 @@ require 'random_data'
 Post.find_or_create_by(title:"My Title", body: "My Body")
 Comment.find_or_create_by(post_id: 51, body:"Comment Body")
 
+
 #create posts
 
 50.times do 
@@ -30,8 +31,17 @@ posts = Post.all
    )
 end
 
+50.times do 
+   Advertisement.create!(
+      title: RandomData.random_sentence,
+      body: RandomData.random_paragraph,
+      price: 1 + rand(20) 
+   )
+end
+
 puts "Seed Finished"
 puts "#{Post.count} posts created"
 puts "#{Comment.count} comments created"
+puts "#{Advertisement.count} ADvertisements created"
 
 
