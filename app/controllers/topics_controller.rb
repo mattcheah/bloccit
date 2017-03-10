@@ -43,7 +43,7 @@ class TopicsController < ApplicationController
          redirect_to @topic
       else
          flash.now[:alert] = "Something went wrong and your topic could not be updated. Please try again"
-         render :new
+         render :edit
       end
    end
    
