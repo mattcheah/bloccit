@@ -9795,3 +9795,618 @@ Processing by TopicsController#show as HTML
 Completed 200 OK in 44ms (Views: 42.0ms | ActiveRecord: 0.6ms)
 
 
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.3ms)[0m  [1m[32mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "bqugfn gzb mblhyr ehjw"], ["description", "qowkypia nqmlz oirmd odlhfq awbstmoc qdrbawp bhl qse jciy oanmw dvrjqfuo pxdcbti pdhfbnt dymvfsbw yqna ctrumoq mge ncap locndz wjp vtnzkdjr udh vel rmufke wxlnpt xlmikdo kahudgi neuck jdf rdph sgkyoawt lbpcnxsw"], ["created_at", 2017-03-10 20:23:28 UTC], ["updated_at", 2017-03-10 20:23:28 UTC]]
+  [1m[35m (9.7ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 4.16.27.51 at 2017-03-10 20:30:36 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 3103ms (Views: 3087.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/topics" for 4.16.27.51 at 2017-03-10 20:31:49 +0000
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (4.7ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  Rendered topics/index.html.erb within layouts/application (114.8ms)
+Completed 200 OK in 191ms (Views: 173.4ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/topics/1" for 4.16.27.51 at 2017-03-10 20:31:50 +0000
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?[0m  [["topic_id", 1]]
+  Rendered topics/show.html.erb within layouts/application (68.2ms)
+Completed 200 OK in 118ms (Views: 109.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/topics" for 4.16.27.51 at 2017-03-10 20:31:54 +0000
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  Rendered topics/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 76ms (Views: 74.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/topics/5" for 4.16.27.51 at 2017-03-10 20:31:55 +0000
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTopic Load (0.1ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?[0m  [["topic_id", 5]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 23]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 25]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 27]]
+  Rendered topics/show.html.erb within layouts/application (37.2ms)
+Completed 200 OK in 97ms (Views: 93.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/topics/5/posts/23" for 4.16.27.51 at 2017-03-10 20:31:56 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"topic_id"=>"5", "id"=>"23"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 60ms (Views: 55.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/topics/5/posts/23/edit" for 4.16.27.51 at 2017-03-10 20:32:00 +0000
+Processing by PostsController#edit as HTML
+  Parameters: {"topic_id"=>"5", "id"=>"23"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered posts/_form.html.erb (28.2ms)
+  Rendered posts/edit.html.erb within layouts/application (105.2ms)
+Completed 200 OK in 182ms (Views: 178.2ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/topics/5/posts/23" for 4.16.27.51 at 2017-03-10 20:32:03 +0000
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HNoc5NVT0ZCkjUWS6s2QLqc7+hHIW1CFAttRNcFA255jOFSQvW0TX8LA8zb/c4HoCepJgewhDCi2zoiiwIh5qg==", "post"=>{"title"=>"trvl qptzsma gurzhfi", "body"=>"prql hwoyrzg acvx wbeayqn kzlwdqb ztsxalw qfgbc dtibahge swyflhtv mujn jslhk sxbvwdlq tdcr lqifh fzpauoh pgkewml odnj iqkd ezumy lehswax nduo zsyvrk fnubl rbnaydfo nleih qtn lxojz yruhjemg samfp qxolh qbdlkeyr nqxwd dhcmtgfr jhlkgt pgsrjkm smzxbgaq yifmo zapxmbu xpabjf ouvcb buke"}, "commit"=>"Save", "topic_id"=>"5", "id"=>"23"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTopic Load (0.1ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://bloc-foundation-mattcheah.c9users.io/topics/5/posts/23
+Completed 302 Found in 8ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/topics/5/posts/23" for 4.16.27.51 at 2017-03-10 20:32:03 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"topic_id"=>"5", "id"=>"23"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 71ms (Views: 67.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/topics/5/posts/23/edit" for 4.16.27.51 at 2017-03-10 20:32:06 +0000
+Processing by PostsController#edit as HTML
+  Parameters: {"topic_id"=>"5", "id"=>"23"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  [1m[36mTopic Load (0.1ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered posts/_form.html.erb (3.3ms)
+  Rendered posts/edit.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 204ms (Views: 201.5ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/topics/5/posts/23" for 4.16.27.51 at 2017-03-10 20:32:15 +0000
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"glINdOD+bn1wccLVcBEsWeUx0j6vwmdFocQXJ3X3/BX9sEUAiMCsshY8dHFlrz2fS+Bhrou4O+gV0c6wdD9eIQ==", "post"=>{"title"=>"Hello my post! post 23, topic 5", "body"=>"prql hwoyrzg acvx wbeayqn kzlwdqb ztsxalw qfgbc dtibahge swyflhtv mujn jslhk sxbvwdlq tdcr lqifh fzpauoh pgkewml odnj iqkd ezumy lehswax nduo zsyvrk fnubl rbnaydfo nleih qtn lxojz yruhjemg samfp qxolh qbdlkeyr nqxwd dhcmtgfr jhlkgt pgsrjkm smzxbgaq yifmo zapxmbu xpabjf ouvcb buke"}, "commit"=>"Save", "topic_id"=>"5", "id"=>"23"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTopic Load (0.1ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "posts" SET "title" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["title", "Hello my post! post 23, topic 5"], ["updated_at", 2017-03-10 20:32:15 UTC], ["id", 23]]
+  [1m[35m (14.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://bloc-foundation-mattcheah.c9users.io/topics/5/posts/23
+Completed 302 Found in 86ms (ActiveRecord: 14.8ms)
+
+
+Started GET "/topics/5/posts/23" for 4.16.27.51 at 2017-03-10 20:32:15 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"topic_id"=>"5", "id"=>"23"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 81ms (Views: 77.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/topics/5/posts/23/edit" for 4.16.27.51 at 2017-03-10 20:32:17 +0000
+Processing by PostsController#edit as HTML
+  Parameters: {"topic_id"=>"5", "id"=>"23"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered posts/_form.html.erb (12.4ms)
+  Rendered posts/edit.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 261ms (Views: 257.1ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/topics/5/posts/23" for 4.16.27.51 at 2017-03-10 20:32:21 +0000
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jqfE2Bhz9retyjB0ZJKVaLgpAj3GRGAGJc2/y0j7fw/xRYyscE00eMuHhtBxLISuFvixreI+PKuR2GZcSTPdOw==", "post"=>{"title"=>"hel", "body"=>"prql hwoyrzg acvx wbeayqn kzlwdqb ztsxalw qfgbc dtibahge swyflhtv mujn jslhk sxbvwdlq tdcr lqifh fzpauoh pgkewml odnj iqkd ezumy lehswax nduo zsyvrk fnubl rbnaydfo nleih qtn lxojz yruhjemg samfp qxolh qbdlkeyr nqxwd dhcmtgfr jhlkgt pgsrjkm smzxbgaq yifmo zapxmbu xpabjf ouvcb buke"}, "commit"=>"Save", "topic_id"=>"5", "id"=>"23"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[35m (1.8ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTopic Load (0.5ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (4.3ms)
+  Rendered posts/edit.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 99ms (Views: 82.3ms | ActiveRecord: 2.6ms)
+
+
+Started PATCH "/topics/5/posts/23" for 4.16.27.51 at 2017-03-10 20:32:25 +0000
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3B6Ufkp3FQscWp4VQQOeTlh7pPgSzFxvswIXEyPgwS6j/NwKIknXxHoXKLFUvY+I9qoXaDa2AMIHF86EIihjGg==", "post"=>{"title"=>"Hello my post! post 23, topic 5", "body"=>"prql hwoyrzg acvx wbeayqn kzlwdqb ztsxalw qfgbc dtibahge swyflhtv mujn jslhk sxbvwdlq tdcr lqifh fzpauoh pgkewml odnj iqkd ezumy lehswax nduo zsyvrk fnubl rbnaydfo nleih qtn lxojz yruhjemg samfp qxolh qbdlkeyr nqxwd dhcmtgfr jhlkgt pgsrjkm smzxbgaq yifmo zapxmbu xpabjf ouvcb buke"}, "commit"=>"Save", "topic_id"=>"5", "id"=>"23"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTopic Load (0.1ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://bloc-foundation-mattcheah.c9users.io/topics/5/posts/23
+Completed 302 Found in 190ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/topics/5/posts/23" for 4.16.27.51 at 2017-03-10 20:32:26 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"topic_id"=>"5", "id"=>"23"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mTopic Load (0.5ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 69ms (Views: 65.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/topics/5/posts/23" for 4.16.27.51 at 2017-03-10 20:33:39 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"topic_id"=>"5", "id"=>"23"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mTopic Load (0.1ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 68ms (Views: 64.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/topics" for 4.16.27.51 at 2017-03-10 20:33:41 +0000
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  Rendered topics/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 110ms (Views: 107.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/topics/1" for 4.16.27.51 at 2017-03-10 20:33:44 +0000
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTopic Load (0.1ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?[0m  [["topic_id", 1]]
+  Rendered topics/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 47ms (Views: 44.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/topics/1/posts/new" for 4.16.27.51 at 2017-03-10 20:33:46 +0000
+  
+ActionController::RoutingError (No route matches [POST] "/topics/1/posts/new"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered collection of /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [25 times] (32.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.8ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (220.5ms)
+Started GET "/topics/1/posts/new" for 4.16.27.51 at 2017-03-10 20:34:30 +0000
+Processing by PostsController#new as HTML
+  Parameters: {"topic_id"=>"1"}
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 2.2ms)
+
+
+  
+SyntaxError (/home/ubuntu/workspace/code/bloccit/app/views/posts/new.html.erb:16: syntax error, unexpected ':', expecting '}'
+...partial: "form", locals {topic: @post.topic, post: @post} );...
+...                               ^
+/home/ubuntu/workspace/code/bloccit/app/views/posts/new.html.erb:16: syntax error, unexpected tLABEL, expecting '='
+...cals {topic: @post.topic, post: @post} );@output_buffer.safe...
+...                               ^
+/home/ubuntu/workspace/code/bloccit/app/views/posts/new.html.erb:37: syntax error, unexpected keyword_ensure, expecting ')'
+/home/ubuntu/workspace/code/bloccit/app/views/posts/new.html.erb:39: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/posts/new.html.erb:16: syntax error, unexpected ':', expecting '}'
+app/views/posts/new.html.erb:16: syntax error, unexpected tLABEL, expecting '='
+app/views/posts/new.html.erb:37: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/posts/new.html.erb:39: syntax error, unexpected keyword_end, expecting ')'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.7ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (46.2ms)
+Started GET "/topics/1/posts/new" for 4.16.27.51 at 2017-03-10 20:35:32 +0000
+Processing by PostsController#new as HTML
+  Parameters: {"topic_id"=>"1"}
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 1.9ms)
+
+
+  
+SyntaxError (/home/ubuntu/workspace/code/bloccit/app/views/posts/new.html.erb:16: syntax error, unexpected ':', expecting '}'
+...partial: "form", locals {topic: @post.topic, post: @post} );...
+...                               ^
+/home/ubuntu/workspace/code/bloccit/app/views/posts/new.html.erb:16: syntax error, unexpected tLABEL, expecting '='
+...cals {topic: @post.topic, post: @post} );@output_buffer.safe...
+...                               ^
+/home/ubuntu/workspace/code/bloccit/app/views/posts/new.html.erb:37: syntax error, unexpected keyword_ensure, expecting ')'
+/home/ubuntu/workspace/code/bloccit/app/views/posts/new.html.erb:39: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/posts/new.html.erb:16: syntax error, unexpected ':', expecting '}'
+app/views/posts/new.html.erb:16: syntax error, unexpected tLABEL, expecting '='
+app/views/posts/new.html.erb:37: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/posts/new.html.erb:39: syntax error, unexpected keyword_end, expecting ')'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.2ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (26.9ms)
+Started GET "/topics/1/posts/new" for 4.16.27.51 at 2017-03-10 20:36:00 +0000
+Processing by PostsController#new as HTML
+  Parameters: {"topic_id"=>"1"}
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/ubuntu/workspace/code/bloccit/app/views/posts/new.html.erb:16: syntax error, unexpected ':', expecting '}'
+...partial: "form", locals {topic: @post.topic, post: @post} );...
+...                               ^
+/home/ubuntu/workspace/code/bloccit/app/views/posts/new.html.erb:16: syntax error, unexpected tLABEL, expecting '='
+...cals {topic: @post.topic, post: @post} );@output_buffer.safe...
+...                               ^
+/home/ubuntu/workspace/code/bloccit/app/views/posts/new.html.erb:37: syntax error, unexpected keyword_ensure, expecting ')'
+/home/ubuntu/workspace/code/bloccit/app/views/posts/new.html.erb:39: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/posts/new.html.erb:16: syntax error, unexpected ':', expecting '}'
+app/views/posts/new.html.erb:16: syntax error, unexpected tLABEL, expecting '='
+app/views/posts/new.html.erb:37: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/posts/new.html.erb:39: syntax error, unexpected keyword_end, expecting ')'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.3ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (86.4ms)
+Started GET "/topics/1/posts/new" for 4.16.27.51 at 2017-03-10 20:36:21 +0000
+Processing by PostsController#new as HTML
+  Parameters: {"topic_id"=>"1"}
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/ubuntu/workspace/code/bloccit/app/views/posts/new.html.erb:16: syntax error, unexpected ':', expecting '}'
+...partial: "form", locals {topic: @post.topic, post: @post} );...
+...                               ^
+/home/ubuntu/workspace/code/bloccit/app/views/posts/new.html.erb:16: syntax error, unexpected tLABEL, expecting '='
+...cals {topic: @post.topic, post: @post} );@output_buffer.safe...
+...                               ^
+/home/ubuntu/workspace/code/bloccit/app/views/posts/new.html.erb:21: syntax error, unexpected keyword_ensure, expecting ')'
+/home/ubuntu/workspace/code/bloccit/app/views/posts/new.html.erb:23: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/posts/new.html.erb:16: syntax error, unexpected ':', expecting '}'
+app/views/posts/new.html.erb:16: syntax error, unexpected tLABEL, expecting '='
+app/views/posts/new.html.erb:21: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/posts/new.html.erb:23: syntax error, unexpected keyword_end, expecting ')'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.2ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (26.2ms)
+Started GET "/topics/1/posts/new" for 4.16.27.51 at 2017-03-10 20:36:59 +0000
+Processing by PostsController#new as HTML
+  Parameters: {"topic_id"=>"1"}
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (3.4ms)
+  Rendered posts/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 122ms (Views: 119.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/topics/1/posts" for 4.16.27.51 at 2017-03-10 20:37:17 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ckRGYrf5IBryCykI3+hNAHk/FfxfzrovYqoE/6LyfxqqqJgOCaOj1XgnPypS6jy0Gu+4U06eycy3eiyl9go4yg==", "post"=>{"title"=>"", "body"=>""}, "commit"=>"Save", "topic_id"=>"1"}
+  [1m[36mTopic Load (0.1ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (2.8ms)
+  Rendered posts/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 59ms (Views: 53.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/topics/1/posts" for 4.16.27.51 at 2017-03-10 20:56:32 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/topics/1/posts"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered collection of /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [25 times] (34.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (85.8ms)
+Started GET "/topics/1/" for 4.16.27.51 at 2017-03-10 20:57:00 +0000
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?[0m  [["topic_id", 1]]
+  Rendered topics/show.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 234ms (Views: 134.9ms | ActiveRecord: 4.1ms)
+
+
+Started POST "/topics/1/posts/new" for 4.16.27.51 at 2017-03-10 20:57:06 +0000
+  
+ActionController::RoutingError (No route matches [POST] "/topics/1/posts/new"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered collection of /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [25 times] (10.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (48.5ms)
+Started GET "/topics/1/posts/new" for 4.16.27.51 at 2017-03-10 20:58:27 +0000
+Processing by PostsController#new as HTML
+  Parameters: {"topic_id"=>"1"}
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (5.5ms)
+  Rendered posts/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 87ms (Views: 45.0ms | ActiveRecord: 18.5ms)
+
+
+Started GET "/topics" for 4.16.27.51 at 2017-03-10 20:58:34 +0000
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.5ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  Rendered topics/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 56ms (Views: 52.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/topics/2" for 4.16.27.51 at 2017-03-10 20:58:36 +0000
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  Rendered topics/show.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 68ms (Views: 64.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/topics/2/posts/6" for 4.16.27.51 at 2017-03-10 20:58:37 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"topic_id"=>"2", "id"=>"6"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mTopic Load (0.1ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 47ms (Views: 42.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/topics/2/posts/6" for 4.16.27.51 at 2017-03-10 20:58:40 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"topic_id"=>"2", "id"=>"6"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 48ms (Views: 45.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/topics/2/posts/6/edit" for 4.16.27.51 at 2017-03-10 20:58:41 +0000
+Processing by PostsController#edit as HTML
+  Parameters: {"topic_id"=>"2", "id"=>"6"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  [1m[36mTopic Load (0.1ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered posts/_form.html.erb (3.6ms)
+  Rendered posts/edit.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 48ms (Views: 44.8ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/topics/2/posts/6" for 4.16.27.51 at 2017-03-10 20:58:44 +0000
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Pf57pETS0QXPTy1yIPZjsSIjS/2TJ8DeQqqL65zxl0Tv8KM2ekF96vCforUr18HkIof0qxVcHV36feQs+rdQVg==", "post"=>{"title"=>"", "body"=>"xmknzu zcgyuoa dqabk ehzr zaetrhbm dpswfz pkuoe axzd wfxm cbuperx dqrno mwyuorzp mrjcsv hupl hivzo zrogtlnv oxnvy grpaou xlkqhus fyqtra ebyxkgrt rwoigv rlvds lcop xapetc blxmz mfojxhv sbojgd qijz gnd noifrdg okgy brmsn msup mvijfsnl dngotxw"}, "commit"=>"Save", "topic_id"=>"2", "id"=>"6"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTopic Load (0.1ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (4.1ms)
+  Rendered posts/edit.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 44ms (Views: 39.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/topics" for 4.16.27.51 at 2017-03-10 20:59:40 +0000
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.6ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  Rendered topics/index.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 55ms (Views: 47.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/topics/4" for 4.16.27.51 at 2017-03-10 20:59:41 +0000
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?[0m  [["topic_id", 4]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 17]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 34]]
+  Rendered topics/show.html.erb within layouts/application (26.9ms)
+Completed 200 OK in 204ms (Views: 199.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/topics/4/posts/new" for 4.16.27.51 at 2017-03-10 20:59:42 +0000
+Processing by PostsController#new as HTML
+  Parameters: {"topic_id"=>"4"}
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (5.4ms)
+  Rendered posts/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 60ms (Views: 55.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/topics/4/posts" for 4.16.27.51 at 2017-03-10 20:59:44 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"duFMtPxxJYPxIzjzVB0+qyAYQZbmkZPl7ev4V+S8AQUMtqEr7X/a2e5A79luNqM7a8AyQnWtJaRU/CtljwAMrg==", "post"=>{"title"=>"", "body"=>""}, "commit"=>"Save", "topic_id"=>"4"}
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (4.9ms)
+  Rendered posts/new.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 53ms (Views: 46.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/topics/4/posts" for 4.16.27.51 at 2017-03-10 20:59:52 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IJZ/P7neWg8kONw3dsEQIBsLLXRHRomD+qmBvKX+pLxawZKgqNClVTtbCx1M6o2wUNNeoNR6P8JDvlKOzkKpFw==", "post"=>{"title"=>"he", "body"=>"he"}, "commit"=>"Save", "topic_id"=>"4"}
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (4.6ms)
+  Rendered posts/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 51ms (Views: 47.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/topics/4/posts" for 4.16.27.51 at 2017-03-10 20:59:56 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/6niWFti5P+er3sZNFf2HFiXk0TiIKaXBpZDSA9eY6eF/g/HSmwbpYHMrDMOfGuME0/gkHEcENa/gZB6ZOJuDA==", "post"=>{"title"=>"hello 1!", "body"=>"he"}, "commit"=>"Save", "topic_id"=>"4"}
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (5.2ms)
+  Rendered posts/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 71ms (Views: 65.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/topics/4/posts" for 4.16.27.51 at 2017-03-10 21:00:03 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cWq/nI0ZdlKx0SDbC0pinXadkjMrJMykIPqtl3AG5QMLPVIDnBeJCK6y9/ExYf8NPUXh57gYeuWZ7X6lG7roqA==", "post"=>{"title"=>"hello 1!", "body"=>"hesdfsdfdsfsdfsdfsdfsdfgsdfgb sfbsfgb"}, "commit"=>"Save", "topic_id"=>"4"}
+  [1m[36mTopic Load (0.5ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "topic_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "hello 1!"], ["body", "hesdfsdfdsfsdfsdfsdfsdfgsdfgb sfbsfgb"], ["created_at", 2017-03-10 21:00:03 UTC], ["updated_at", 2017-03-10 21:00:03 UTC], ["topic_id", 4]]
+  [1m[35m (10.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://bloc-foundation-mattcheah.c9users.io/topics/4/posts/52
+Completed 302 Found in 21ms (ActiveRecord: 11.4ms)
+
+
+Started GET "/topics/4/posts/52" for 4.16.27.51 at 2017-03-10 21:00:03 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"topic_id"=>"4", "id"=>"52"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 52], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 153ms (Views: 148.4ms | ActiveRecord: 0.7ms)
+
+
