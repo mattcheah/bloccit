@@ -1,0 +1,31 @@
+<h1>Edit Topic</h1>
+
+<div class="row">
+   <div class="col-md-4">
+      <p>Rules for editing topics</p>
+      <ul>
+         <li>Topics must only have an even number of posts</li>
+         <li>Topics may not discuss anything related to human experiences</li>
+         <li>Each post in every topic must contain a rickroll video</li>
+      </ul>
+   </div>
+   <div class="col-md-8">
+      <%= form_for @topic do |f| %>
+         <div class="form-group">
+            <%= f.label :name %>
+            <%= f.text_field :name, class: "form-control", placeholder: "Enter your topic name" %>
+         </div>
+         <div class="form-group">
+            <%= f.label :description %>
+            <%= f.text_field :description, class: "form-control", placeholder: "Enter your description here" %>
+         </div>
+         <div class="form-group">
+            <%= f.label :public, class: 'checkbox' do %>
+               <%= f.check_box :public %> Public Topic
+            <% end %>
+         </div>
+         <%= f.submit "Save", class: "btn btn-success" %>
+      <% end %>
+   </div>
+</div>
+

@@ -11,18 +11,28 @@ require 'random_data'
 Post.find_or_create_by(title:"My Title", body: "My Body")
 Comment.find_or_create_by(post_id: 51, body:"Comment Body")
 
+
+#create topics
+15.times do
+   Topic.create!(
+      name: RandomData.random_sentence,
+      description: RandomData.random_paragraph
+   )
+end
+topics=Topic.all
+
 #create posts
 
 50.times do 
    Post.create!(
          title: RandomData.random_sentence,
-         body: RandomData.random_paragraph
+         body: RandomData.random_paragraph,
+         topic: topics.sample
    )
 end
 posts = Post.all
 
 #Create Comments
-
 100.times do
    Comment.create!(
       post:posts.sample,
@@ -30,20 +40,10 @@ posts = Post.all
    )
 end
 
-20.times do 
-   
-   randTF = rand(1..2) == 1 ? true : false 
-   
-   Question.create!(
-      title: RandomData.random_sentence,
-      body: RandomData.random_paragraph,
-      resolved: randTF
-   )
-end
-
 puts "Seed Finished"
+puts "#{Topic.count} topics created"
 puts "#{Post.count} posts created"
 puts "#{Comment.count} comments created"
-puts "#{Question.count} questions created"
+
 
 
