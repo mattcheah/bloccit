@@ -13,13 +13,22 @@ Comment.find_or_create_by(post_id: 51, body:"Comment Body")
 
 
 #create topics
-15.times do
+5.times do
    Topic.create!(
       name: RandomData.random_sentence,
       description: RandomData.random_paragraph
    )
 end
 topics=Topic.all
+
+50.times do
+   SponsoredPost.create!(
+      title: RandomData.random_sentence,
+      body: RandomData.random_paragraph,
+      price: rand(1..100),
+      topic: topics.sample
+   )
+end
 
 #create posts
 
@@ -42,6 +51,7 @@ end
 
 puts "Seed Finished"
 puts "#{Topic.count} topics created"
+puts "#{SponsoredPost.count} sponsored Posts created"
 puts "#{Post.count} posts created"
 puts "#{Comment.count} comments created"
 

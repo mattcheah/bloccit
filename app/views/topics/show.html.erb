@@ -20,9 +20,22 @@
             </div>
          </div>
       <% end %>
+      <div style="width:80%;border-bottom:2px dashed black;margin:30px auto"></div>
+      
+      <p style="text-align:center;">Sponsored Posts</p>
+      <% @topic.sponsoredPosts.each do |spost| %>
+         <div class="media">
+            <div class="media-body">
+               <h4 class="media-heading">
+                  <%= link_to spost.title, topic_sponsored_post_path(@topic, spost) %>
+               </h4>
+            </div>
+         </div>
+      <% end %>
    </div>
    <div class="col-md-4">
-      <%= button_to "New Topic", new_topic_post_path(@topic), class: "btn btn-success" %>
+      <%= button_to "New Post", new_topic_post_path(@topic), method: :get, class: "btn btn-success" %>
+      <%= button_to "New Sponsored Post", new_topic_sponsored_post_path(@topic), method: :get, class: "btn btn-success" %>
       <%= button_to "Delete Topic", @topic, method: :delete, class: "btn btn-success" %>
    </div>
 </div>
