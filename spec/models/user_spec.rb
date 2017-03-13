@@ -33,6 +33,19 @@ RSpec.describe User, type: :model do
          expect(user_with_invalid_name).not_to be_valid
       end
    end
+   
+   
+   describe "name field" do
+      let(:user) {User.create!(name: "bloccit user", email: "user@bloccit.com", password: "password") }
+  
+      it "capitalizes the first letter of the string" do
+         expect(user.name[0] == user.name[0].upcase).to be true
+      end
       
-      
+      it "capitalizes the last name in the string" do
+
+         expect(user.name.split(" ")[1][0] == user.name.split(" ")[1][0].upcase).to be true
+      end
+   end   
+   
 end
