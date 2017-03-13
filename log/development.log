@@ -12715,3 +12715,1181 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 47ms (Views: 45.6ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 4.16.27.51 at 2017-03-13 20:36:21 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 559ms (Views: 549.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 4.16.27.51 at 2017-03-13 20:36:23 +0000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 67ms (Views: 52.1ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/confirm" for 4.16.27.51 at 2017-03-13 20:36:31 +0000
+Processing by UsersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QPdcTHM7Nxe2GU3J6p4CoZk3je4pwjH9lUdxKB9eXzdxW9Fm5K6sV35F6CBLlys9UndsbaLjDsTiNXHmS/HS2g==", "user"=>{"name"=>"asd", "email"=>"helloasd", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  Rendering users/confirm.html.erb within layouts/application
+DEPRECATION WARNING: Method to_hash is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.2/classes/ActionController/Parameters.html (called from _app_views_users_confirm_html_erb__2605136004157070860_70278595623980 at /home/ubuntu/workspace/code/bloccit/app/views/users/confirm.html.erb:8)
+DEPRECATION WARNING: Method to_param is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.2/classes/ActionController/Parameters.html (called from _app_views_users_confirm_html_erb__2605136004157070860_70278595623980 at /home/ubuntu/workspace/code/bloccit/app/views/users/confirm.html.erb:8)
+DEPRECATION WARNING: Method to_param is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.2/classes/ActionController/Parameters.html (called from _app_views_users_confirm_html_erb__2605136004157070860_70278595623980 at /home/ubuntu/workspace/code/bloccit/app/views/users/confirm.html.erb:8)
+  Rendered users/confirm.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 53ms (Views: 50.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/new" for 4.16.27.51 at 2017-03-13 20:36:41 +0000
+  
+ActionController::RoutingError (No route matches [POST] "/users/new"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered collection of /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [20 times] (9.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.8ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (173.5ms)
+Started GET "/confirm" for 4.16.27.51 at 2017-03-13 20:37:13 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/confirm"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered collection of /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [20 times] (6.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (183.4ms)
+Started GET "/confirm" for 4.16.27.51 at 2017-03-13 20:37:15 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/confirm"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered collection of /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [20 times] (6.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (37.6ms)
+Started POST "/confirm" for 4.16.27.51 at 2017-03-13 20:37:37 +0000
+Processing by UsersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QPdcTHM7Nxe2GU3J6p4CoZk3je4pwjH9lUdxKB9eXzdxW9Fm5K6sV35F6CBLlys9UndsbaLjDsTiNXHmS/HS2g==", "user"=>{"name"=>"asd", "email"=>"helloasd", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  Rendering users/confirm.html.erb within layouts/application
+DEPRECATION WARNING: Method to_hash is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.2/classes/ActionController/Parameters.html (called from _app_views_users_confirm_html_erb__2605136004157070860_32277280 at /home/ubuntu/workspace/code/bloccit/app/views/users/confirm.html.erb:8)
+DEPRECATION WARNING: Method to_param is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.2/classes/ActionController/Parameters.html (called from _app_views_users_confirm_html_erb__2605136004157070860_32277280 at /home/ubuntu/workspace/code/bloccit/app/views/users/confirm.html.erb:8)
+DEPRECATION WARNING: Method to_param is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.2/classes/ActionController/Parameters.html (called from _app_views_users_confirm_html_erb__2605136004157070860_32277280 at /home/ubuntu/workspace/code/bloccit/app/views/users/confirm.html.erb:8)
+  Rendered users/confirm.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 72ms (Views: 70.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 4.16.27.51 at 2017-03-13 20:37:40 +0000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 69ms (Views: 67.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/confirm" for 4.16.27.51 at 2017-03-13 20:37:50 +0000
+Processing by UsersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TYdtd3DxPAVuj+cwMW735Msn/a7rW8qW+OldY5uQOEd8K+Bd52SnRabTQtmQZ954AGccLWB69a+Pm12tzz+1qg==", "user"=>{"name"=>"asdas", "email"=>"dasd", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  Rendering users/confirm.html.erb within layouts/application
+DEPRECATION WARNING: Method to_hash is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.2/classes/ActionController/Parameters.html (called from _app_views_users_confirm_html_erb__2605136004157070860_70278599095660 at /home/ubuntu/workspace/code/bloccit/app/views/users/confirm.html.erb:8)
+DEPRECATION WARNING: Method to_param is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.2/classes/ActionController/Parameters.html (called from _app_views_users_confirm_html_erb__2605136004157070860_70278599095660 at /home/ubuntu/workspace/code/bloccit/app/views/users/confirm.html.erb:8)
+DEPRECATION WARNING: Method to_param is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.2/classes/ActionController/Parameters.html (called from _app_views_users_confirm_html_erb__2605136004157070860_70278599095660 at /home/ubuntu/workspace/code/bloccit/app/views/users/confirm.html.erb:8)
+  Rendered users/confirm.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 116ms (Views: 114.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users?action=confirm&authenticity_token=TYdtd3DxPAVuj%2BcwMW735Msn%2Fa7rW8qW%2BOldY5uQOEd8K%2BBd52SnRabTQtmQZ954AGccLWB69a%2BPm12tzz%2B1qg%3D%3D&commit=Sign+Up&controller=users&user=email%3Ddasd%26name%3Dasdas%26password%3Dasdasd%26password_confirmation%3Dasdasd&utf8=%E2%9C%93" for 4.16.27.51 at 2017-03-13 20:37:51 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"TYdtd3DxPAVuj+cwMW735Msn/a7rW8qW+OldY5uQOEd8K+Bd52SnRabTQtmQZ954AGccLWB69a+Pm12tzz+1qg==", "commit"=>"Sign Up", "user"=>"email=dasd&name=asdas&password=asdasd&password_confirmation=asdasd", "utf8"=>"✓"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+
+TypeError - no implicit conversion of Symbol into Integer:
+  app/controllers/users_controller.rb:9:in `create'
+  actionpack (5.0.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+  actionpack (5.0.2) lib/abstract_controller/base.rb:188:in `process_action'
+  actionpack (5.0.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+  actionpack (5.0.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:126:in `call'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:455:in `call'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+  actionpack (5.0.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (5.0.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+  actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (5.0.2) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (5.0.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.0.2) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (5.0.2) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+  activerecord (5.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (5.0.2) lib/abstract_controller/base.rb:126:in `process'
+  actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
+  actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
+  actionpack (5.0.2) lib/action_controller/metal.rb:262:in `dispatch'
+  actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+  actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+  actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+  actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+  actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+  rack (2.0.1) lib/rack/etag.rb:25:in `call'
+  rack (2.0.1) lib/rack/conditional_get.rb:38:in `call'
+  rack (2.0.1) lib/rack/head.rb:12:in `call'
+  rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+  rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+  activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+  actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+  railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+  railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+  activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+  activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+  railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+  sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+  rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+  rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+  activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+  rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+  railties (5.0.2) lib/rails/engine.rb:522:in `call'
+  rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+Started POST "/__better_errors/a247b67cde2e7c1b/variables" for 4.16.27.51 at 2017-03-13 20:37:51 +0000
+Started GET "/" for 4.16.27.51 at 2017-03-13 20:39:39 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 422ms (Views: 406.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 4.16.27.51 at 2017-03-13 20:39:41 +0000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (34.3ms)
+Completed 200 OK in 94ms (Views: 80.1ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/confirm" for 4.16.27.51 at 2017-03-13 20:39:46 +0000
+Processing by UsersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5XVPIJVJicqX7YiYgF1tY8P4Sccm7kLBl5LV864m5SrU2cIKAtwSil+xLXEhVET/CLioRK3Pffjg4NU9+oloxw==", "user"=>{"name"=>"asd", "email"=>"qwe", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  Rendering users/confirm.html.erb within layouts/application
+DEPRECATION WARNING: Method to_hash is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.2/classes/ActionController/Parameters.html (called from _app_views_users_confirm_html_erb___4254410500808437344_70179201171680 at /home/ubuntu/workspace/code/bloccit/app/views/users/confirm.html.erb:8)
+DEPRECATION WARNING: Method to_param is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.2/classes/ActionController/Parameters.html (called from _app_views_users_confirm_html_erb___4254410500808437344_70179201171680 at /home/ubuntu/workspace/code/bloccit/app/views/users/confirm.html.erb:8)
+DEPRECATION WARNING: Method to_param is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.2/classes/ActionController/Parameters.html (called from _app_views_users_confirm_html_erb___4254410500808437344_70179201171680 at /home/ubuntu/workspace/code/bloccit/app/views/users/confirm.html.erb:8)
+  Rendered users/confirm.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 91ms (Views: 88.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users?action=confirm&authenticity_token=5XVPIJVJicqX7YiYgF1tY8P4Sccm7kLBl5LV864m5SrU2cIKAtwSil%2BxLXEhVET%2FCLioRK3Pffjg4NU9%2Boloxw%3D%3D&commit=Sign+Up&controller=users&user=email%3Dqwe%26name%3Dasd%26password%3Dqweqwe%26password_confirmation%3Dqweqwe&utf8=%E2%9C%93" for 4.16.27.51 at 2017-03-13 20:39:48 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"5XVPIJVJicqX7YiYgF1tY8P4Sccm7kLBl5LV864m5SrU2cIKAtwSil+xLXEhVET/CLioRK3Pffjg4NU9+oloxw==", "commit"=>"Sign Up", "user"=>"email=qwe&name=asd&password=qweqwe&password_confirmation=qweqwe", "utf8"=>"✓"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+
+TypeError - no implicit conversion of Symbol into Integer:
+  app/controllers/users_controller.rb:9:in `create'
+  actionpack (5.0.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+  actionpack (5.0.2) lib/abstract_controller/base.rb:188:in `process_action'
+  actionpack (5.0.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+  actionpack (5.0.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:126:in `call'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:455:in `call'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+  actionpack (5.0.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (5.0.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+  actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (5.0.2) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (5.0.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.0.2) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (5.0.2) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+  activerecord (5.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (5.0.2) lib/abstract_controller/base.rb:126:in `process'
+  actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
+  actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
+  actionpack (5.0.2) lib/action_controller/metal.rb:262:in `dispatch'
+  actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+  actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+  actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+  actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+  actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+  rack (2.0.1) lib/rack/etag.rb:25:in `call'
+  rack (2.0.1) lib/rack/conditional_get.rb:38:in `call'
+  rack (2.0.1) lib/rack/head.rb:12:in `call'
+  rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+  rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+  activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+  actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+  railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+  railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+  activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+  activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+  railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+  sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+  rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+  rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+  activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+  rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+  railties (5.0.2) lib/rails/engine.rb:522:in `call'
+  rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+Started POST "/__better_errors/3757b52cacc1acc0/variables" for 4.16.27.51 at 2017-03-13 20:39:49 +0000
+Started GET "/users?action=confirm&authenticity_token=5XVPIJVJicqX7YiYgF1tY8P4Sccm7kLBl5LV864m5SrU2cIKAtwSil%2BxLXEhVET%2FCLioRK3Pffjg4NU9%2Boloxw%3D%3D&commit=Sign+Up&controller=users&user=email%3Dqwe%26name%3Dasd%26password%3Dqweqwe%26password_confirmation%3Dqweqwe&utf8=%E2%9C%93" for 4.16.27.51 at 2017-03-13 20:40:58 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered collection of /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [20 times] (12.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.2ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (64.9ms)
+Started GET "/confirm" for 4.16.27.51 at 2017-03-13 20:41:06 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/confirm"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered collection of /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [20 times] (8.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (41.2ms)
+Started GET "/users/new" for 4.16.27.51 at 2017-03-13 20:41:10 +0000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 89ms (Views: 72.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/new" for 4.16.27.51 at 2017-03-13 20:41:10 +0000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 87ms (Views: 84.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/confirm" for 4.16.27.51 at 2017-03-13 20:41:16 +0000
+Processing by UsersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cc3WyvjRrKgNFx7JG/5a8yK52yqTNrPKz72BZuyVqR1AYVvgb0Q36MVLuyC693Nv6fk6qRgXjPO4z4GouDok8A==", "user"=>{"name"=>"zxczxc", "email"=>"zxczxc", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  Rendering users/confirm.html.erb within layouts/application
+DEPRECATION WARNING: Method to_hash is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.2/classes/ActionController/Parameters.html (called from _app_views_users_confirm_html_erb___4254410500808437344_70179213774000 at /home/ubuntu/workspace/code/bloccit/app/views/users/confirm.html.erb:8)
+DEPRECATION WARNING: Method to_param is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.2/classes/ActionController/Parameters.html (called from _app_views_users_confirm_html_erb___4254410500808437344_70179213774000 at /home/ubuntu/workspace/code/bloccit/app/views/users/confirm.html.erb:8)
+DEPRECATION WARNING: Method to_param is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.2/classes/ActionController/Parameters.html (called from _app_views_users_confirm_html_erb___4254410500808437344_70179213774000 at /home/ubuntu/workspace/code/bloccit/app/views/users/confirm.html.erb:8)
+  Rendered users/confirm.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 83ms (Views: 81.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users?action=confirm&authenticity_token=cc3WyvjRrKgNFx7JG%2F5a8yK52yqTNrPKz72BZuyVqR1AYVvgb0Q36MVLuyC693Nv6fk6qRgXjPO4z4GouDok8A%3D%3D&commit=Sign+Up&controller=users&user=email%3Dzxczxc%26name%3Dzxczxc%26password%3Dzxczxc%26password_confirmation%3Dzxczxc&utf8=%E2%9C%93" for 4.16.27.51 at 2017-03-13 20:41:17 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"cc3WyvjRrKgNFx7JG/5a8yK52yqTNrPKz72BZuyVqR1AYVvgb0Q36MVLuyC693Nv6fk6qRgXjPO4z4GouDok8A==", "commit"=>"Sign Up", "user"=>"email=zxczxc&name=zxczxc&password=zxczxc&password_confirmation=zxczxc", "utf8"=>"✓"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `name' for #<String:0x007fa7be3d5438>:
+  app/controllers/users_controller.rb:9:in `create'
+  actionpack (5.0.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+  actionpack (5.0.2) lib/abstract_controller/base.rb:188:in `process_action'
+  actionpack (5.0.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+  actionpack (5.0.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:126:in `call'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:455:in `call'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+  actionpack (5.0.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (5.0.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+  actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (5.0.2) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (5.0.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.0.2) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (5.0.2) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+  activerecord (5.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (5.0.2) lib/abstract_controller/base.rb:126:in `process'
+  actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
+  actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
+  actionpack (5.0.2) lib/action_controller/metal.rb:262:in `dispatch'
+  actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+  actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+  actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+  actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+  actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+  rack (2.0.1) lib/rack/etag.rb:25:in `call'
+  rack (2.0.1) lib/rack/conditional_get.rb:38:in `call'
+  rack (2.0.1) lib/rack/head.rb:12:in `call'
+  rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+  rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+  activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+  actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+  railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+  railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+  activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+  activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+  railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+  sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+  rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+  rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+  activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+  rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+  railties (5.0.2) lib/rails/engine.rb:522:in `call'
+  rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+Started POST "/__better_errors/f961c7c5ca9c81bc/variables" for 4.16.27.51 at 2017-03-13 20:41:18 +0000
+Started GET "/users?action=confirm&authenticity_token=cc3WyvjRrKgNFx7JG%2F5a8yK52yqTNrPKz72BZuyVqR1AYVvgb0Q36MVLuyC693Nv6fk6qRgXjPO4z4GouDok8A%3D%3D&commit=Sign+Up&controller=users&user=email%3Dzxczxc%26name%3Dzxczxc%26password%3Dzxczxc%26password_confirmation%3Dzxczxc&utf8=%E2%9C%93" for 4.16.27.51 at 2017-03-13 20:42:24 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered collection of /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [20 times] (10.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (52.1ms)
+Started GET "/confirm" for 4.16.27.51 at 2017-03-13 20:42:27 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/confirm"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered collection of /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [20 times] (10.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.2ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (55.2ms)
+Started POST "/confirm" for 4.16.27.51 at 2017-03-13 20:42:33 +0000
+Processing by UsersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cc3WyvjRrKgNFx7JG/5a8yK52yqTNrPKz72BZuyVqR1AYVvgb0Q36MVLuyC693Nv6fk6qRgXjPO4z4GouDok8A==", "user"=>{"name"=>"zxczxc", "email"=>"zxczxc", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  Rendering users/confirm.html.erb within layouts/application
+DEPRECATION WARNING: Method to_hash is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.2/classes/ActionController/Parameters.html (called from _app_views_users_confirm_html_erb___4254410500808437344_70179215886160 at /home/ubuntu/workspace/code/bloccit/app/views/users/confirm.html.erb:8)
+DEPRECATION WARNING: Method to_param is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.2/classes/ActionController/Parameters.html (called from _app_views_users_confirm_html_erb___4254410500808437344_70179215886160 at /home/ubuntu/workspace/code/bloccit/app/views/users/confirm.html.erb:8)
+DEPRECATION WARNING: Method to_param is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.2/classes/ActionController/Parameters.html (called from _app_views_users_confirm_html_erb___4254410500808437344_70179215886160 at /home/ubuntu/workspace/code/bloccit/app/views/users/confirm.html.erb:8)
+  Rendered users/confirm.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 54ms (Views: 43.3ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users?action=confirm&authenticity_token=cc3WyvjRrKgNFx7JG%2F5a8yK52yqTNrPKz72BZuyVqR1AYVvgb0Q36MVLuyC693Nv6fk6qRgXjPO4z4GouDok8A%3D%3D&commit=Sign+Up&controller=users&user=email%3Dzxczxc%26name%3Dzxczxc%26password%3Dzxczxc%26password_confirmation%3Dzxczxc&utf8=%E2%9C%93" for 4.16.27.51 at 2017-03-13 20:42:34 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"cc3WyvjRrKgNFx7JG/5a8yK52yqTNrPKz72BZuyVqR1AYVvgb0Q36MVLuyC693Nv6fk6qRgXjPO4z4GouDok8A==", "commit"=>"Sign Up", "user"=>"email=zxczxc&name=zxczxc&password=zxczxc&password_confirmation=zxczxc", "utf8"=>"✓"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+
+TypeError - no implicit conversion of Symbol into Integer:
+  app/controllers/users_controller.rb:9:in `create'
+  actionpack (5.0.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+  actionpack (5.0.2) lib/abstract_controller/base.rb:188:in `process_action'
+  actionpack (5.0.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+  actionpack (5.0.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:126:in `call'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:455:in `call'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+  actionpack (5.0.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (5.0.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+  actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (5.0.2) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (5.0.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.0.2) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (5.0.2) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+  activerecord (5.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (5.0.2) lib/abstract_controller/base.rb:126:in `process'
+  actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
+  actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
+  actionpack (5.0.2) lib/action_controller/metal.rb:262:in `dispatch'
+  actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+  actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+  actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+  actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+  actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+  rack (2.0.1) lib/rack/etag.rb:25:in `call'
+  rack (2.0.1) lib/rack/conditional_get.rb:38:in `call'
+  rack (2.0.1) lib/rack/head.rb:12:in `call'
+  rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+  rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+  activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+  actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+  railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+  railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+  activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+  activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+  railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+  sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+  rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+  rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+  activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+  rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+  railties (5.0.2) lib/rails/engine.rb:522:in `call'
+  rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+Started POST "/__better_errors/b7924e81a307fcbe/variables" for 4.16.27.51 at 2017-03-13 20:42:34 +0000
+Started GET "/users?action=confirm&authenticity_token=cc3WyvjRrKgNFx7JG%2F5a8yK52yqTNrPKz72BZuyVqR1AYVvgb0Q36MVLuyC693Nv6fk6qRgXjPO4z4GouDok8A%3D%3D&commit=Sign+Up&controller=users&user=email%3Dzxczxc%26name%3Dzxczxc%26password%3Dzxczxc%26password_confirmation%3Dzxczxc&utf8=%E2%9C%93" for 4.16.27.51 at 2017-03-13 20:44:39 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendered collection of /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [20 times] (11.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (62.8ms)
+Started GET "/confirm" for 4.16.27.51 at 2017-03-13 20:44:43 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/confirm"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered collection of /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [20 times] (6.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (38.0ms)
+Started POST "/confirm" for 4.16.27.51 at 2017-03-13 20:44:47 +0000
+Processing by UsersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cc3WyvjRrKgNFx7JG/5a8yK52yqTNrPKz72BZuyVqR1AYVvgb0Q36MVLuyC693Nv6fk6qRgXjPO4z4GouDok8A==", "user"=>{"name"=>"zxczxc", "email"=>"zxczxc", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  Rendering users/confirm.html.erb within layouts/application
+  Rendered users/confirm.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 54ms (Views: 52.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users?action=confirm&controller=users" for 4.16.27.51 at 2017-03-13 20:44:48 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"j7jTzd9MvyLFqbDGDlrTY6iU2mniizm94mi9XIhFZqS+FF7nSNkkYg31FS+vU/r/Y9Q76mmqBoSVGr2S3OrrSQ=="}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `[]' for nil:NilClass:
+  app/controllers/users_controller.rb:9:in `create'
+  actionpack (5.0.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+  actionpack (5.0.2) lib/abstract_controller/base.rb:188:in `process_action'
+  actionpack (5.0.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+  actionpack (5.0.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:126:in `call'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:455:in `call'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+  actionpack (5.0.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (5.0.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+  actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (5.0.2) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (5.0.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.0.2) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (5.0.2) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+  activerecord (5.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (5.0.2) lib/abstract_controller/base.rb:126:in `process'
+  actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
+  actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
+  actionpack (5.0.2) lib/action_controller/metal.rb:262:in `dispatch'
+  actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+  actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+  actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+  actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+  actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+  rack (2.0.1) lib/rack/etag.rb:25:in `call'
+  rack (2.0.1) lib/rack/conditional_get.rb:38:in `call'
+  rack (2.0.1) lib/rack/head.rb:12:in `call'
+  rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+  rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+  activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+  actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+  railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+  railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+  activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+  activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+  railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+  sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+  rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+  rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+  activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+  rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+  railties (5.0.2) lib/rails/engine.rb:522:in `call'
+  rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+Started POST "/__better_errors/0c28face25d665fe/variables" for 4.16.27.51 at 2017-03-13 20:44:48 +0000
+Started POST "/__better_errors/0c28face25d665fe/eval" for 4.16.27.51 at 2017-03-13 20:45:18 +0000
+Started POST "/__better_errors/0c28face25d665fe/eval" for 4.16.27.51 at 2017-03-13 20:45:21 +0000
+Started POST "/__better_errors/0c28face25d665fe/eval" for 4.16.27.51 at 2017-03-13 20:45:24 +0000
+Started POST "/__better_errors/0c28face25d665fe/eval" for 4.16.27.51 at 2017-03-13 20:45:32 +0000
+Started GET "/users?action=confirm&controller=users" for 4.16.27.51 at 2017-03-13 20:45:53 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered collection of /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [20 times] (8.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (45.9ms)
+Started GET "/confirm" for 4.16.27.51 at 2017-03-13 20:45:56 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/confirm"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered collection of /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [20 times] (9.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (44.3ms)
+Started POST "/confirm" for 4.16.27.51 at 2017-03-13 20:46:01 +0000
+Processing by UsersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cc3WyvjRrKgNFx7JG/5a8yK52yqTNrPKz72BZuyVqR1AYVvgb0Q36MVLuyC693Nv6fk6qRgXjPO4z4GouDok8A==", "user"=>{"name"=>"zxczxc", "email"=>"zxczxc", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  Rendering users/confirm.html.erb within layouts/application
+  Rendered users/confirm.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected keyword_class, expecting ')'
+..."create", params: params} class: "btn btn-success" );@output...
+...                               ^:
+  app/views/users/confirm.html.erb:8:in `'
+  actionview (5.0.2) lib/action_view/template.rb:310:in `compile'
+  actionview (5.0.2) lib/action_view/template.rb:259:in `block (2 levels) in compile!'
+  activesupport (5.0.2) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (5.0.2) lib/action_view/template.rb:356:in `instrument'
+  actionview (5.0.2) lib/action_view/template.rb:258:in `block in compile!'
+  actionview (5.0.2) lib/action_view/template.rb:246:in `compile!'
+  actionview (5.0.2) lib/action_view/template.rb:158:in `block in render'
+  activesupport (5.0.2) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (5.0.2) lib/action_view/template.rb:354:in `instrument'
+  actionview (5.0.2) lib/action_view/template.rb:157:in `render'
+  actionview (5.0.2) lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+  actionview (5.0.2) lib/action_view/renderer/abstract_renderer.rb:42:in `block in instrument'
+  activesupport (5.0.2) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (5.0.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.0.2) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (5.0.2) lib/action_view/renderer/abstract_renderer.rb:41:in `instrument'
+  actionview (5.0.2) lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+  actionview (5.0.2) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+  actionview (5.0.2) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+  actionview (5.0.2) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (5.0.2) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (5.0.2) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (5.0.2) lib/action_view/rendering.rb:104:in `_render_template'
+  actionpack (5.0.2) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (5.0.2) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (5.0.2) lib/action_controller/metal/rendering.rb:52:in `render_to_body'
+  actionpack (5.0.2) lib/action_controller/metal/renderers.rb:142:in `render_to_body'
+  actionpack (5.0.2) lib/abstract_controller/rendering.rb:26:in `render'
+  actionpack (5.0.2) lib/action_controller/metal/rendering.rb:36:in `render'
+  actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (5.0.2) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+  activesupport (5.0.2) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (5.0.2) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (5.0.2) lib/action_controller/metal/implicit_render.rb:36:in `default_render'
+  actionpack (5.0.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+  actionpack (5.0.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+  actionpack (5.0.2) lib/abstract_controller/base.rb:188:in `process_action'
+  actionpack (5.0.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+  actionpack (5.0.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:126:in `call'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:455:in `call'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+  actionpack (5.0.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (5.0.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+  actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (5.0.2) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (5.0.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.0.2) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (5.0.2) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+  activerecord (5.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (5.0.2) lib/abstract_controller/base.rb:126:in `process'
+  actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
+  actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
+  actionpack (5.0.2) lib/action_controller/metal.rb:262:in `dispatch'
+  actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+  actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+  actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+  actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+  actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+  rack (2.0.1) lib/rack/etag.rb:25:in `call'
+  rack (2.0.1) lib/rack/conditional_get.rb:38:in `call'
+  rack (2.0.1) lib/rack/head.rb:12:in `call'
+  rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+  rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+  activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+  actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+  railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+  railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+  activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+  activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+  railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+  sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+  rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+  rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+  activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+  rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+  railties (5.0.2) lib/rails/engine.rb:522:in `call'
+  rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+Started POST "/__better_errors/df8076d05077c4ce/variables" for 4.16.27.51 at 2017-03-13 20:46:01 +0000
+Started GET "/confirm" for 4.16.27.51 at 2017-03-13 20:46:56 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/confirm"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered collection of /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [20 times] (7.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (38.5ms)
+Started POST "/confirm" for 4.16.27.51 at 2017-03-13 20:47:03 +0000
+Processing by UsersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cc3WyvjRrKgNFx7JG/5a8yK52yqTNrPKz72BZuyVqR1AYVvgb0Q36MVLuyC693Nv6fk6qRgXjPO4z4GouDok8A==", "user"=>{"name"=>"asd", "email"=>"qwe", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  Rendering users/confirm.html.erb within layouts/application
+DEPRECATION WARNING: Method to_hash is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.2/classes/ActionController/Parameters.html (called from _app_views_users_confirm_html_erb___4254410500808437344_70179200995380 at /home/ubuntu/workspace/code/bloccit/app/views/users/confirm.html.erb:8)
+DEPRECATION WARNING: Method to_param is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.2/classes/ActionController/Parameters.html (called from _app_views_users_confirm_html_erb___4254410500808437344_70179200995380 at /home/ubuntu/workspace/code/bloccit/app/views/users/confirm.html.erb:8)
+DEPRECATION WARNING: Method to_param is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.2/classes/ActionController/Parameters.html (called from _app_views_users_confirm_html_erb___4254410500808437344_70179200995380 at /home/ubuntu/workspace/code/bloccit/app/views/users/confirm.html.erb:8)
+  Rendered users/confirm.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 63ms (Views: 60.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users?action=confirm&authenticity_token=cc3WyvjRrKgNFx7JG%2F5a8yK52yqTNrPKz72BZuyVqR1AYVvgb0Q36MVLuyC693Nv6fk6qRgXjPO4z4GouDok8A%3D%3D&commit=Sign+Up&controller=users&user=email%3Dqwe%26name%3Dasd%26password%3Dzxczxc%26password_confirmation%3Dzxczxc&utf8=%E2%9C%93" for 4.16.27.51 at 2017-03-13 20:47:05 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"cc3WyvjRrKgNFx7JG/5a8yK52yqTNrPKz72BZuyVqR1AYVvgb0Q36MVLuyC693Nv6fk6qRgXjPO4z4GouDok8A==", "commit"=>"Sign Up", "user"=>"email=qwe&name=asd&password=zxczxc&password_confirmation=zxczxc", "utf8"=>"✓"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+
+TypeError - no implicit conversion of Symbol into Integer:
+  app/controllers/users_controller.rb:9:in `create'
+  actionpack (5.0.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+  actionpack (5.0.2) lib/abstract_controller/base.rb:188:in `process_action'
+  actionpack (5.0.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+  actionpack (5.0.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:126:in `call'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:455:in `call'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+  actionpack (5.0.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (5.0.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+  actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (5.0.2) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (5.0.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.0.2) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (5.0.2) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+  activerecord (5.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (5.0.2) lib/abstract_controller/base.rb:126:in `process'
+  actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
+  actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
+  actionpack (5.0.2) lib/action_controller/metal.rb:262:in `dispatch'
+  actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+  actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+  actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+  actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+  actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+  rack (2.0.1) lib/rack/etag.rb:25:in `call'
+  rack (2.0.1) lib/rack/conditional_get.rb:38:in `call'
+  rack (2.0.1) lib/rack/head.rb:12:in `call'
+  rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+  rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+  activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+  actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+  railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+  railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+  activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+  activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+  railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+  sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+  rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+  rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+  activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+  rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+  railties (5.0.2) lib/rails/engine.rb:522:in `call'
+  rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+Started POST "/__better_errors/b1c7ccabb52ecabb/variables" for 4.16.27.51 at 2017-03-13 20:47:05 +0000
+Started POST "/__better_errors/b1c7ccabb52ecabb/eval" for 4.16.27.51 at 2017-03-13 20:47:10 +0000
+Started GET "/confirm" for 4.16.27.51 at 2017-03-13 20:48:07 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/confirm"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered collection of /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [20 times] (7.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (46.8ms)
+Started POST "/confirm" for 4.16.27.51 at 2017-03-13 20:48:12 +0000
+Processing by UsersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cc3WyvjRrKgNFx7JG/5a8yK52yqTNrPKz72BZuyVqR1AYVvgb0Q36MVLuyC693Nv6fk6qRgXjPO4z4GouDok8A==", "user"=>{"name"=>"asd", "email"=>"qwe", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  Rendering users/confirm.html.erb within layouts/application
+  Rendered users/confirm.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 38ms (Views: 36.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users?action=confirm&authenticity_token=cc3WyvjRrKgNFx7JG%2F5a8yK52yqTNrPKz72BZuyVqR1AYVvgb0Q36MVLuyC693Nv6fk6qRgXjPO4z4GouDok8A%3D%3D&commit=Sign+Up&controller=users&user%5Bemail%5D=qwe&user%5Bname%5D=asd&user%5Bpassword%5D=[FILTERED]&user%5Bpassword_confirmation%5D=[FILTERED]&utf8=%E2%9C%93" for 4.16.27.51 at 2017-03-13 20:48:13 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"cc3WyvjRrKgNFx7JG/5a8yK52yqTNrPKz72BZuyVqR1AYVvgb0Q36MVLuyC693Nv6fk6qRgXjPO4z4GouDok8A==", "commit"=>"Sign Up", "user"=>{"email"=>"qwe", "name"=>"asd", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "utf8"=>"✓"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "qwe"], ["LIMIT", 1]]
+  [1m[35mSQL (66.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "asd"], ["email", "qwe"], ["password_digest", "$2a$10$QoewwDF66tlbc7kwY0J7I.SEKVInC.K49z96RN2XXfsy1kJaWIj8K"], ["created_at", 2017-03-13 20:48:13 UTC], ["updated_at", 2017-03-13 20:48:13 UTC]]
+  [1m[35m (9.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://bloc-foundation-mattcheah.c9users.io/
+Completed 302 Found in 173ms (ActiveRecord: 76.1ms)
+
+
+Started GET "/" for 4.16.27.51 at 2017-03-13 20:48:13 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 41ms (Views: 39.3ms | ActiveRecord: 0.0ms)
+
+
