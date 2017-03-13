@@ -19,6 +19,8 @@ group :development, :test do
   gem 'rails-controller-testing'
   gem 'shoulda'
   gem "nyan-cat-formatter"
+  gem 'better_errors'
+  gem "binding_of_caller"
 end
 
 
@@ -29,6 +31,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'bootstrap-sass'
 gem 'bcrypt'
+
 
 
 
