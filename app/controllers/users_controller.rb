@@ -13,6 +13,7 @@ class UsersController < ApplicationController
       
       if @user.save
          flash[:notice] = "User Created Successfully"
+         create_session(@user)
          redirect_to root_path
       else
          flash.now[:alert] = "User was not created, please try again"
