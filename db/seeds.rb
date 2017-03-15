@@ -21,10 +21,20 @@ Comment.find_or_create_by(post_id: 51, body:"Comment Body")
 end
 topics=Topic.all
 
-#create posts
+#create users
+5.times do 
+   User.create!(
+      name: RandomData.random_name,
+      email: RandomData.random_email,
+      password: RandomData.random_sentence
+   )
+end
+users = User.all
 
+#create posts
 50.times do 
    Post.create!(
+         user: users.sample,
          title: RandomData.random_sentence,
          body: RandomData.random_paragraph,
          topic: topics.sample
@@ -40,7 +50,14 @@ posts = Post.all
    )
 end
 
+user = User.first
+user.update_attributes!(
+   email: "mattcheah@gmail.com",
+   password: "helloworld"
+)
+
 puts "Seed Finished"
+puts "#{User.count} users created"
 puts "#{Topic.count} topics created"
 puts "#{Post.count} posts created"
 puts "#{Comment.count} comments created"

@@ -1,11 +1,16 @@
 class User < ApplicationRecord
+   has_many :posts
+   
    before_save {self.email = email.downcase if email.present? }
    before_save {
+      
       if name?
          name_array = []
-         name.split.each do |n|
-            n[0].capitalize!
+         name.split(" ").each do |n|
+
+            n[0] = n[0].capitalize
             name_array << n
+            
          end
          self.name = name_array.join(" ")
       end
