@@ -13,7 +13,7 @@ Comment.find_or_create_by(post_id: 51, body:"Comment Body")
 
 
 #create topics
-15.times do
+5.times do
    Topic.create!(
       name: RandomData.random_sentence,
       description: RandomData.random_paragraph
@@ -32,24 +32,29 @@ end
 users = User.all
 
 #create posts
-50.times do 
-   Post.create!(
+30.times do 
+   post = Post.create!(
          user: users.sample,
          title: RandomData.random_sentence,
          body: RandomData.random_paragraph,
          topic: topics.sample
    )
+   post.update_attribute(:created_at, rand(10.minutes .. 1.year).ago)
+   
+   rand(1..20).times {post.votes.create!(value: [-1,1].sample, user: users.sample) }
+   
 end
 posts = Post.all
 
 #Create Comments
-100.times do
+150.times do
    Comment.create!(
       user: users.sample,
       post: posts.sample,
       body: RandomData.random_paragraph
    )
 end
+
 
 admin = User.create!(
    name: "admin User",
@@ -69,6 +74,8 @@ puts "#{User.count} users created"
 puts "#{Topic.count} topics created"
 puts "#{Post.count} posts created"
 puts "#{Comment.count} comments created"
+puts "#{Vote.count} votes created"
+
 
 
 

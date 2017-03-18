@@ -2,6 +2,10 @@ class PostsController < ApplicationController
 
   before_action :require_sign_in, except: :show
   before_action :authorize_user, except: [:show, :new, :create]
+	
+	def init
+		self.rank = 17000
+	end
 
   def show
     @post = Post.find(params[:id])
@@ -19,6 +23,7 @@ class PostsController < ApplicationController
     
     @post.topic = Topic.find(params[:topic_id])
     @post.user = current_user
+
     
     if @post.save
       flash[:notice] = "Post was saved."
