@@ -54,6 +54,8 @@ Rails.application.configure do
   
   
   # Configure better errors to show up
-  BetterErrors::Middleware.allow_ip! '4.16.27.0/24'
+  #BetterErrors::Middleware.allow_ip! '4.16.27.0/24'
+  
+  config.action_mailer.default_url_options = {host: 'localhost'}
   
 end
