@@ -1,3 +1,5 @@
+require 'pry'
+
 class Post < ApplicationRecord
 	belongs_to :topic
 	belongs_to :user
@@ -7,6 +9,7 @@ class Post < ApplicationRecord
 	
 	after_create :update_rank
 	after_create :upvote_once
+	after_create :favorite_post
 	
 	default_scope { order('rank DESC') }
 	
@@ -40,6 +43,12 @@ class Post < ApplicationRecord
 	
 	def upvote_once
 		user.votes.create!(value: 1, post: self)
+	end
+	
+	def favorite_post
+		this_post = self
+		self.favorites.create!(user: user)
+		FavoriteMailer.new_post(user, this_post).deliver_now
 	end
 
 end

@@ -21,7 +21,7 @@ group :development, :test do
   gem "nyan-cat-formatter"
   gem 'better_errors'
   gem "binding_of_caller"
-  gem "byebug"
+  gem "pry"
 end
 
 
