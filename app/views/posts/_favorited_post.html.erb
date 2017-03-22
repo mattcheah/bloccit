@@ -1,0 +1,23 @@
+<% avatar_url = favorited_post.user.avatar_url(48) %>
+<div class="media">
+	
+	<%= render partial: 'votes/voter', locals: {post: favorited_post} %>
+	<div class="media-body">
+		<h4 class="media-heading">
+			<%= link_to favorited_post.title, topic_post_path(favorited_post.topic, favorited_post) %>
+		</h4>
+		<div>
+			submitted <%= time_ago_in_words(favorited_post.created_at) %> ago by <br>
+			<% if avatar_url %>
+					<%= image_tag avatar_url, class: "media-object pull-left media-left" %>
+			<% end %>
+					<h4 class="pull-left"><%= favorited_post.user.name %></h4>
+			<div class="clearfix"></div>
+		</div>
+		<small>
+		 	
+		 	<%= favorited_post.comments.count %> Comments
+		</small>
+			
+	</div>
+</div>

@@ -9,7 +9,9 @@ class Post < ApplicationRecord
 	after_create :upvote_once
 	
 	default_scope { order('rank DESC') }
+	# only show the posts that exist within public topics 
 	scope :visible_to ,-> (user) {user ? all : joins(:topic).where('topics.public' => true) }
+	# only show the posts that have been favorited by the user
 	
 	
 	validates :title, length: {minimum: 5}, presence: true 
